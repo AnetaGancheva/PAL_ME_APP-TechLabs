@@ -6,7 +6,6 @@ import UserNavbar from './UserNavbar'
 import { GlobalContext } from '../Context'
 
 
-
 const Container = styled.div`
     // position: fixed;
     // top: 0;
@@ -21,8 +20,9 @@ const Container = styled.div`
     padding: 0 1%;
     // font-size: 0.9rem;
 ` 
-const Left = styled.h1``
+const Left = styled.div``
 
+const Logo = styled.img``
 const Center = styled.div`
     display: flex;
     justify-content: center;
@@ -58,7 +58,9 @@ const Navbar = () => {
     return (
        <>
             <Container>
-                <Left>PAL ME</Left>
+                <Left>
+                    <Logo src="../images/palMeLogo" alt="logo"/>
+                </Left>
                     <Center>
                         <NavLink to="/" >Home</NavLink>
                         <NavLink to="/findPlayer">Find a player</NavLink>
