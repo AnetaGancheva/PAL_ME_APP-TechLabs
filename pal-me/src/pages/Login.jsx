@@ -61,6 +61,7 @@ const Login = () => {
                     <Button>LOGIN</Button>
                     <StyledLink to="/forget-password">DO NOT YOU REMEMBER THE PASSWORD?</StyledLink>
                     <StyledLink to="/register">CREATE A NEW ACCOUNT</StyledLink>
+                    <StyledLink to="/">BACK TO HOME</StyledLink>
                 </Form>
            </Wrapper>
         </Container>

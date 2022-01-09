@@ -37,9 +37,6 @@ const Input = styled.input`
     padding: 1.5%;
     margin: 2%;
     min-width: 40%; 
-        /* min-width: 40%;
-        margin: 20px 10px 0 0;
-        padding: 10px; */
 `
 const Agreement = styled.span`
     margin: 2%;

@@ -1,8 +1,7 @@
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import {MdViewHeadline} from "react-icons/md"
-import {MdOutlineAccountCircle} from "react-icons/md"
+import {MdOutlineAccountCircle, MdArrowDropDown} from "react-icons/md"
 import UserNavbar from './UserNavbar'
 import { GlobalContext } from '../Context'
 
@@ -36,6 +35,8 @@ const NavLink = styled(Link)`
     color: white;
     font-size: 1.1rem;
     margin: 0 3%;
+
+
 `
 const Right = styled.div`
 
@@ -51,16 +52,34 @@ const NavButton = styled.button`
     color: white;
     width: 100%;
     font-size: 1.8rem;
+
+    &:hover {
+        background-color: #1e1d1d;
+    }
 ` 
-const DropDownMenu = styled.ul`
-    display: none;
+const DropDownMenu = styled.div`
+    display: ${props => props.showMenu ? 'block' : 'none'};
     position: absolute;
+    right: 15px;
     z-index: 1;
+    background-color: black;
+    color: white;
+    width: 160px;
+
+    ${NavLink} {
+        display: block;
+       padding: 10px 11px;
+    }
+`
+const Hr = styled.div`
+    background-color: #eee;
+    height: 0.1px;
 `
 const Navbar = () => {
 
-    const {isLogged, handleNavToggle} = useContext(GlobalContext)
+    const {isLogged, showDropdownMenu, handleNavToggle, handleDropdownMenu} = useContext(GlobalContext)
   
+    console.log(showDropdownMenu)
     return (
        <>
             <Container>
@@ -75,11 +94,13 @@ const Navbar = () => {
                         <NavLink to="/Clubs and Venues">Find a player</NavLink>
                     </Center>
                     <Right>
-                        <NavButton onClick={handleNavToggle}>
-                            <MdOutlineAccountCircle />
+                        <NavButton onClick={handleDropdownMenu}>
+                            {/* <MdOutlineAccountCircle /> */}
+                            <MdArrowDropDown />
                         </NavButton>
-                        <DropDownMenu>
+                        <DropDownMenu showMenu={showDropdownMenu}>
                             <NavLink to="/login">Login</NavLink>
+                            <Hr />
                             <NavLink to="/register">Create An Account</NavLink>
                         </DropDownMenu>
                     </Right>          
