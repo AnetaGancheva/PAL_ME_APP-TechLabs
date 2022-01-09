@@ -22,7 +22,7 @@ const Container = styled.div`
 ` 
 const Left = styled.div``
 
-const Logo = styled.img``
+const Logo = styled.h1``
 const Center = styled.div`
     display: flex;
     justify-content: center;
@@ -47,7 +47,7 @@ const NavButton = styled.button`
     cursor: pointer;
     outline: none;
     color: white;
-    widht: 100%;
+    width: 100%;
     font-size: 1.8rem;
 ` 
 
@@ -59,7 +59,7 @@ const Navbar = () => {
        <>
             <Container>
                 <Left>
-                    <Logo src="../images/palMeLogo" alt="logo"/>
+                    <Logo>PAL ME</Logo>
                 </Left>
                     <Center>
                         <NavLink to="/" >Home</NavLink>
