@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import {MdViewHeadline} from "react-icons/md"
+import {MdOutlineAccountCircle} from "react-icons/md"
 import UserNavbar from './UserNavbar'
 import { GlobalContext } from '../Context'
 
@@ -40,6 +41,7 @@ const Right = styled.div`
 
     // margin-right: 2%;
     font-size: 2rem;
+    position: relative;
 `
 const NavButton = styled.button`
     background: transparent;
@@ -50,7 +52,11 @@ const NavButton = styled.button`
     width: 100%;
     font-size: 1.8rem;
 ` 
-
+const DropDownMenu = styled.ul`
+    display: none;
+    position: absolute;
+    z-index: 1;
+`
 const Navbar = () => {
 
     const {isLogged, handleNavToggle} = useContext(GlobalContext)
@@ -70,8 +76,12 @@ const Navbar = () => {
                     </Center>
                     <Right>
                         <NavButton onClick={handleNavToggle}>
-                            <MdViewHeadline />
+                            <MdOutlineAccountCircle />
                         </NavButton>
+                        <DropDownMenu>
+                            <NavLink to="/login">Login</NavLink>
+                            <NavLink to="/register">Create An Account</NavLink>
+                        </DropDownMenu>
                     </Right>          
             </Container>
             {isLogged ? <UserNavbar isLogged={isLogged}/> : <UserNavbar />}

@@ -25,7 +25,8 @@ const Wrapper = styled.div`
     padding: 3%;
 `
 const Title = styled.h1`
-    /* text-align: center; */
+    font-size: 24px;
+    font-weight: 300;
     `
 const Form = styled.form`
     display: flex;

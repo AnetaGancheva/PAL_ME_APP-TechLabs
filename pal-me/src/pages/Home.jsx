@@ -6,8 +6,8 @@ import Register from './Register'
 const Home = () => {
     return (
         <div>
-            <Login/>
-            {/* <Navbar/> */}
+            {/* <Register/> */}
+            <Navbar/>
         </div>
     )
 }
