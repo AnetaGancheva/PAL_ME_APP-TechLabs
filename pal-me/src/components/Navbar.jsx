@@ -57,8 +57,8 @@ const NavButton = styled.button`
         background-color: #1e1d1d;
     }
 ` 
-const DropDownMenu = styled.div`
-    display: ${props => props.showMenu ? 'block' : 'none'};
+const DropdownMenu = styled.div`
+    display: ${props => (props.showMenu && !props.isLogged) ? 'block' : 'none'};
     position: absolute;
     right: 15px;
     z-index: 1;
@@ -75,9 +75,23 @@ const Hr = styled.div`
     background-color: #eee;
     height: 0.1px;
 `
+const DropdownUserMenu = styled.div`
+    display: ${props => props.isLogged && props.showMenu? 'block' : 'none'};
+    position: absolute;
+    right: 15px;
+    z-index: 1;
+    background-color: black;
+    color: white;
+    width: 160px;
+
+    ${NavLink} {
+        display: block;
+       padding: 10px 11px;
+    }
+`
 const Navbar = () => {
 
-    const {isLogged, showDropdownMenu, handleNavToggle, handleDropdownMenu} = useContext(GlobalContext)
+    const {isLogged, showDropdownMenu, handleDropdownMenu, handleLogout} = useContext(GlobalContext)
   
     console.log(showDropdownMenu)
     return (
@@ -95,14 +109,20 @@ const Navbar = () => {
                     </Center>
                     <Right>
                         <NavButton onClick={handleDropdownMenu}>
-                            {/* <MdOutlineAccountCircle /> */}
-                            <MdArrowDropDown />
+                            <MdOutlineAccountCircle style={{display: isLogged ? 'inline' : 'none' }}/>
+                            <MdArrowDropDown style={{display: isLogged ? 'none' : 'inline' }} />
                         </NavButton>
-                        <DropDownMenu showMenu={showDropdownMenu}>
+                        <DropdownMenu showMenu={showDropdownMenu} isLogged={isLogged}>
                             <NavLink to="/login">Login</NavLink>
                             <Hr />
                             <NavLink to="/register">Create An Account</NavLink>
-                        </DropDownMenu>
+                        </DropdownMenu>
+                        <DropdownUserMenu showMenu={showDropdownMenu} isLogged={isLogged}>
+                            <NavLink to="/profile">Profile</NavLink>
+                            <Hr />
+                            <NavLink to="/" onClick={handleLogout}>Logout</NavLink>
+                        </DropdownUserMenu>
+
                     </Right>          
             </Container>
             {isLogged ? <UserNavbar isLogged={isLogged}/> : <UserNavbar />}
