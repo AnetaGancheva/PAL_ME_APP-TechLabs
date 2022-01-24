@@ -10,6 +10,8 @@ export const GlobalProvider = ({children}) => {
     const [isLogged , setIsLogged] = useState(true)
     // dropdownMenu state for showing a dropdown menu when the user click on the down arrow in the navbar
     const [showDropdownMenu, setShowDropdownMenu] = useState(false)
+    // checked state for the radio button in the search component, which is on of the two options "player" or "clubs"
+    const [isChecked, setIsChecked] = useState(true); 
 
     // actions 
     const handleNavToggle = () => {
@@ -27,9 +29,16 @@ export const GlobalProvider = ({children}) => {
         setIsLogged(false)
     }
 
+    // handle toggle checked radio button on the search section
+    const handleRadioChecked = () => {
+        setIsChecked(prevState => !prevState)
+    }
+
     return (<GlobalContext.Provider value={{
         isLogged,
         showDropdownMenu,
+        isChecked,
+        handleRadioChecked,
         handleNavToggle,
         handleDropdownMenu,
         handleLogout

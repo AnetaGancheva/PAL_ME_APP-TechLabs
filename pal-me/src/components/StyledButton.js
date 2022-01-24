@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components'
-import {FaApple} from 'react-icons/fa'
 const Button = styled.button`
     background-color: teal;
     border-radius: 4px;
@@ -12,11 +11,14 @@ const Button = styled.button`
     justify-content: space-around;
     align-items: center;
     transition: all 0.5s ease-in-out;
-
+    margin-right:  5%;
+    cursor: pointer;
 
     &:hover{
         transform: translateY(-4px) ;
     }
+
+   
 `
 
 const StyledButton = ({appName, appSymbol}) => {
