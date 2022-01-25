@@ -9,6 +9,7 @@ import { GlobalContext } from '../Context'
 import Search from '../components/Search'
 import Slider from '../components/Slider'
 import Footer from '../components/Footer'
+import Newsletter from '../components/NewsLetter'
 
 
 const Container = styled.div`
@@ -80,6 +81,7 @@ const Home = () => {
             </Container>
             <Search />
             <Slider/>
+            <Newsletter />
             <Footer/>
         </>
     )
