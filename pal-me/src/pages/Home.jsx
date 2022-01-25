@@ -7,12 +7,14 @@ import StyledButton from '../components/StyledButton'
 import {FaApple, FaGooglePlay} from 'react-icons/fa'
 import { GlobalContext } from '../Context'
 import Search from '../components/Search'
+import Slider from '../components/Slider'
+import Footer from '../components/Footer'
 
 
 const Container = styled.div`
     width: 100%;
     /* if user is Logged ,height will equal 100vh - (8vh)navbar height - (5vh)user navbar height*/
-    /* height: ${props => props.isLogged ?  "87vh" : "92vh"}; */
+    height: ${props => props.isLogged ?  "43vh" : "50vh"};
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,6 +79,8 @@ const Home = () => {
                 </Wrapper>
             </Container>
             <Search />
+            <Slider/>
+            <Footer/>
         </>
     )
 }
