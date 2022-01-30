@@ -23,7 +23,7 @@ const Container = styled.div`
 `
 
 const Wrapper = styled.div`
-    width:80%;
+    width:70%;
     height: 50%;
     /* padding: 3% 5%; */
     display: flex;

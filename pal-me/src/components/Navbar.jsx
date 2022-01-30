@@ -104,8 +104,8 @@ const Navbar = () => {
                         <NavLink to="/" >Home</NavLink>
                         <NavLink to="/findPlayer">Find a player</NavLink>
                         <NavLink to="/findGame">Find a game</NavLink>
-                        <NavLink to="/Clubs and Venues">Find a player</NavLink>
-                        <NavLink to="/Clubs and Venues">Find a player</NavLink>
+                        <NavLink to="/players">For player</NavLink>
+                        <NavLink to="/organizers">Find Orgnaization</NavLink>
                     </Center>
                     <Right>
                         <NavButton onClick={handleDropdownMenu}>

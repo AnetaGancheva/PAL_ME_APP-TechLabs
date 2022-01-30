@@ -8,7 +8,7 @@ import {Reviews} from '../data'
 const Container = styled.div`
 
     width: 100%;
-    height: 30vh;
+    height: 20vh;
     display: flex;
     /* justify-content: center; */
     position: relative;
@@ -48,9 +48,10 @@ const Slide = styled.div`
     height: 20vh;
 `
 const Title = styled.h2`
+    text-align: center;
     text-transform: uppercase;
     color: #464646;
-    margin: 0 auto;
+    margin: 3% auto;
 `
 const Slider = () => {
     const [slideIndex, setSlideIndex] = useState(0
@@ -64,12 +65,13 @@ const Slider = () => {
         }
     }
   return (
-  <Container> 
+      <>
+      <Title>SEE WHAT PEOPLE ARE SAYING</Title>
+      <Container> 
       <Arrow direction="left"  onClick={() => handleClick("left")}><MdKeyboardArrowLeft/></Arrow>
       <Wrapper slideIndex={slideIndex}>
             {Reviews.map(item => (
                 <Slide>
-                    <Title>SEE WHAT PEOPLE ARE SAYING</Title>
                     <Review text={item.text} author={item.auhor}/>
                 </Slide>
             ))}
@@ -77,6 +79,8 @@ const Slider = () => {
       </Wrapper>
       <Arrow direction="right" onClick={() => handleClick("right")}><MdKeyboardArrowRight/></Arrow>
  </Container>
+      </>
+  
   )
 };
 

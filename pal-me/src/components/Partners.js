@@ -1,11 +1,14 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import Bar from '../components/Bar'
+import Footer from './Footer';
+
 
 const Partners = () => {
   return (
-  <Container>
-
-  </Container>)
+  <>
+    <Bar title={"Orgnaizers"} />
+    <Footer />
+  </>)
 };
 
 export default Partners;

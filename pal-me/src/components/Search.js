@@ -15,7 +15,7 @@ const Container = styled.div`
     align-items: center;
 `
 const Wrapper = styled.div`
-    width: 80%;
+    width: 70%;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
