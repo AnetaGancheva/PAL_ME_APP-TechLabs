@@ -65,9 +65,9 @@ const Home = () => {
             <Container isLogged={isLogged}>
                 <Wrapper>
                     <InfoContainer>
-                        <Title>Looking for someone to do activity with ?</Title>
+                        <Title>Looking for someone to do activity with?</Title>
                         <Desc>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus ea animi, rem provident obcaecati debitis minima eaque at necessitatibus aliquam. Libero repellendus ex consectetur esse incidunt nisi, ipsum similique sed!
+                            Look no further - palME is the right place for you! Do not hesitate to give it a try!
                         </Desc>
                         <ButtonsContainer>
                             <StyledButton appName="App Store" appSymbol={<FaApple/>}/>

@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import {MdOutlineAccountCircle, MdArrowDropDown} from "react-icons/md"
 import UserNavbar from './UserNavbar'
 import { GlobalContext } from '../Context'
+import palMeLogo from '../images/palMeLogo_103x50BW.png'
 
 
 const Container = styled.div`
@@ -12,7 +13,7 @@ const Container = styled.div`
     // left: 0;
     // z-index: 1;
     height: 8vh;
-    background-color: black;
+    background-color: rgb(0,64,64);
     color: white;
     display: flex;
     justify-content: space-around;
@@ -22,21 +23,30 @@ const Container = styled.div`
 ` 
 const Left = styled.div``
 
-const Logo = styled.h1``
+const Logo = styled.div`
+    background-image: url(${palMeLogo});
+    height: 50px;
+    width: 103px;
+`
+
 const Center = styled.div`
     display: flex;
     justify-content: center;
     align-items:center;
     list-style-type: none;
     flex:2;
-    `
+`
+
 const NavLink = styled(Link)`
     text-decoration: none;
     color: white;
     font-size: 1.1rem;
     margin: 0 3%;
-
-
+    &:hover {
+        background-color: teal;
+        border-radius: 5%;
+        font-weight: bold;
+    }
 `
 const Right = styled.div`
 
@@ -62,13 +72,20 @@ const DropdownMenu = styled.div`
     position: absolute;
     right: 15px;
     z-index: 1;
-    background-color: black;
+    background-color: rgb(0,64,64);
     color: white;
     width: 160px;
+
+    
 
     ${NavLink} {
         display: block;
        padding: 10px 11px;
+
+       &:hover {
+        background-color: teal;
+    }
+
     }
 `
 const Hr = styled.div`
@@ -80,13 +97,20 @@ const DropdownUserMenu = styled.div`
     position: absolute;
     right: 15px;
     z-index: 1;
-    background-color: black;
+    background-color: rgb(0,64,64);
     color: white;
     width: 160px;
+
+    
 
     ${NavLink} {
         display: block;
        padding: 10px 11px;
+
+       &:hover {
+        background-color: teal;
+    }
+
     }
 `
 const Navbar = () => {
@@ -98,14 +122,14 @@ const Navbar = () => {
        <>
             <Container>
                 <Left>
-                    <Logo>PAL ME</Logo>
+                    <Logo />
                 </Left>
                     <Center>
                         <NavLink to="/" >Home</NavLink>
-                        <NavLink to="/findPlayer">Find a player</NavLink>
-                        <NavLink to="/findGame">Find a game</NavLink>
-                        <NavLink to="/players">For player</NavLink>
-                        <NavLink to="/organizers">Find Orgnaization</NavLink>
+                        <NavLink to="/findPlayer">Find a Player</NavLink>
+                        <NavLink to="/findGame">Find a Game</NavLink>
+                        <NavLink to="/players">Information for Players</NavLink>
+                        <NavLink to="/organizers">Information for Organizers</NavLink>
                     </Center>
                     <Right>
                         <NavButton onClick={handleDropdownMenu}>

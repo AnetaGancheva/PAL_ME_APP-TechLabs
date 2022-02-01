@@ -9,7 +9,7 @@ const Players = () => {
 
   return <>
   <Navbar />
-  <Bar title={"For Players"}/>
+  <Bar title={"Players"}/>
   {ForPlayers.map(item => <InfoContainer item={item}/>)}
     <Footer />
   </>

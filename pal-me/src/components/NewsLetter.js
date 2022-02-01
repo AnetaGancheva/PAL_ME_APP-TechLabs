@@ -1,11 +1,13 @@
 import { MdSend } from 'react-icons/md'
 import styled from 'styled-components'
+import newsPicture from '../images/Return_of_Sports_transparent_6.png'
 
 
 
 const  Container =  styled.div`
     height: 60vh;
-    background-color: whitesmoke;
+    background: url(${newsPicture});
+    background-size: cover;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -47,7 +49,7 @@ const Newsletter = () => {
     return (
         <Container>
             <Title>Newsletter</Title>
-            <Desc>Get timely updates for PAl-ME sports events</Desc>
+            <Desc>Get timely updates for PAl-ME sports events, updates, bug fixes and more...</Desc>
             <InputContainer>
                 <Input placeholder='Your email'/>
                 <Button>

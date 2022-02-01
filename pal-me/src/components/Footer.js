@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 import {FaYoutube, FaFacebook, FaTwitter, FaInstagram} from 'react-icons/fa'
+import palMeLogo from '../images/palMeLogo_103x50BW.png'
+
 const Container = styled.div`
     display: flex;
     padding: 3% 5% ;
-    background-color: black;
+    background-color: rgb(0,64,64);
     color: white;
 `
 const Left = styled.div`
@@ -12,7 +14,11 @@ const Left = styled.div`
   flex-direction: column;
   /* padding: 20px; */
 `
-const Logo = styled.h1``
+const Logo = styled.div`
+    background-image: url(${palMeLogo});
+    height: 50px;
+    width: 103px;
+`
 
 const Desc = styled.div`
     margin: 20px 0px;
@@ -60,17 +66,16 @@ const Footer = () => {
   return (
   <Container>
       <Left>
-            <Logo>PAL ME</Logo>
-            <Desc>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable.</Desc>
+            <Logo />
+            <Desc>The only sports app you need in your life!</Desc>
             
       </Left>
       <Center>
-            <Title>Useful Links</Title>
+            <Title>What you can do with palME:</Title>
             <List>
-                 <ListItem>Home</ListItem>
-                 <ListItem>FIND A PLAYER</ListItem>
-                 <ListItem>FIND A CLUB</ListItem>
-                 <ListItem>FIND AN EVENT</ListItem>
+                 <ListItem>Find a Player</ListItem>
+                 <ListItem>Find a Club</ListItem>
+                 <ListItem>Find an Event</ListItem>
             </List>
       </Center>
       <Right>

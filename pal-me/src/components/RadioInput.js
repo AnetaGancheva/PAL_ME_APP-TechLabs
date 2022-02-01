@@ -43,7 +43,7 @@ const RadioInput = () => {
       </RadioLabel>
       <Input type="radio" id="searchType2"/>
       <RadioLabel htmlFor="searchType2">
-        <MdPlace/>CLUBS
+        <MdPlace/>GAMES
       </RadioLabel>
     </RadioContainer> 
     )

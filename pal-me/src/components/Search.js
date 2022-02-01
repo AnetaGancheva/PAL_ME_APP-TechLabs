@@ -5,11 +5,13 @@ import RadioInput from './RadioInput';
 import InputText from './InputText';
 import FormGroup from './FormGroup';
 import SelectSport from './SelectSport';
+import backgroundPhoto from "../images/Search_photo_transparent_3.png"
 
 const Container = styled.div`
     width: 100%;
     height: 40vh;
-    background-color: whitesmoke;
+    background: url(${backgroundPhoto});
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
