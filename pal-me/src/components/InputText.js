@@ -1,3 +1,4 @@
+import { Label } from 'recharts';
 import styled from 'styled-components';
 
 const Input = styled.input`
@@ -6,8 +7,12 @@ const Input = styled.input`
     border: none;
 `
 
-const InputText = () => {
-  return <Input type="text"/>;
+const InputText = ({label}) => {
+  return <>
+      <Label>{Label}</Label>
+      <Input type="text"/>
+  </>
+
 };
 
 export default InputText;

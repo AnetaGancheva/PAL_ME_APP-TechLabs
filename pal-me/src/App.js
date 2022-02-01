@@ -18,7 +18,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="players" element={<Players/>}/>
             <Route path="organizers" element={<Organizers/>}/>
-            <Route path="findPlayers" element={<FindPlayers/>}/>
+            <Route path="findPlayer" element={<FindPlayers/>}/>
           </Routes>
         </Router>
     </GlobalProvider>

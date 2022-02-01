@@ -79,3 +79,41 @@ export const ForOrganizers = [
         direction: "left"
     }
 ]
+
+
+export const Sports = [
+    {
+        value: "Basketball"
+    },
+    {
+        value: "Volleyball"
+    },
+    {
+        value: "Golf"
+    },
+    {
+        value: "Tennis"
+    },
+    {
+        value: "Swimming"
+    },
+    {
+        value: "Football"
+    },
+     {
+        value: "Hockey"
+    },
+    {
+        value: "Skating"
+    },
+     {
+        value: "Cycling"
+    },
+    {
+        value: "Workouts"
+    },
+    {
+        value: "Running"
+    }
+
+]

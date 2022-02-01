@@ -1,10 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from './SearchButton'
-import RadioInput from './RadioInput';
-import InputText from './InputText';
-import FormGroup from './FormGroup';
-import SelectSport from './SelectSport';
 import backgroundPhoto from "../images/Search_photo_transparent_3.png"
 
 const Container = styled.div`
@@ -26,13 +22,11 @@ const SubmitContainer = styled.div`
     align-self: flex-end;
     margin-bottom: 3%;
 `
-const Search = () => {
+const Search = ({children}) => {
   return (
       <Container>
           <Wrapper>
-            <FormGroup title="I'm looking for..." input={<RadioInput/>}/>
-            <FormGroup title="Enter Post code" input={<InputText/>}/>
-            <FormGroup title="sport(s)" input={<SelectSport/>}/>
+           {children}
             <SubmitContainer>
                 <Button type="submit"/>
             </SubmitContainer> 

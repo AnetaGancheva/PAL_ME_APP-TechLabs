@@ -7,10 +7,14 @@ import StyledButton from '../components/StyledButton'
 import {FaApple, FaGooglePlay} from 'react-icons/fa'
 import { GlobalContext } from '../Context'
 import Search from '../components/Search'
+import RadioInput from '../components/RadioInput';
+import InputText from '../components/InputText';
+import FormGroup from '../components/FormGroup';
+import SelectInput from '../components/SelectInput';
 import Slider from '../components/Slider'
 import Footer from '../components/Footer'
 import Newsletter from '../components/NewsLetter'
-
+import {Sports} from '../data'
 
 const Container = styled.div`
     width: 100%;
@@ -79,7 +83,11 @@ const Home = () => {
                     </ImgContainer>
                 </Wrapper>
             </Container>
-            <Search />
+            <Search>
+                <FormGroup title="I'm looking for..." input={<RadioInput/>}/>
+                <FormGroup title="Enter Post code" input={<InputText/>}/>
+                <FormGroup title="sport(s)" input={<SelectInput options={Sports}/>}/>
+            </Search>
             <Slider/>
             <Newsletter />
             <Footer/>
