@@ -18,6 +18,9 @@ const Wrapper = styled.div`
     clip-path: polygon(0 18%, 100% 0, 100% 82%, 0% 100%);
     padding: 5% 0;
     background-color: ${props => props.direction === 'right' ? "whitesmoke" : ""};
+    @media (max-width: 1120px) {
+        padding: 10% 0;
+  }
 `
 const TextContainer = styled.div`
     flex: 2;

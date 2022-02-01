@@ -69,5 +69,13 @@ export const ForOrganizers = [
         image: img9,
         positionedImg: img10,
         direction: "right"
+    },
+    {
+        id: 3,
+        text: "Right so heres the deal. We’re going to help you do your admin in under 5 minutes a week, every week. No joke. It takes 2 minutes to set up your game the frst time and add your squad. Once it’s set up it’ll take you two taps of your phone to send out your invites and keep track of your numbers every week",
+        title: "ADMIN DONE IN FIVE MINUTES WITH SQUADBOSS",
+        image: img7,
+        positionedImg: img8,
+        direction: "left"
     }
 ]
