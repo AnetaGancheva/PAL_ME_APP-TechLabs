@@ -1,5 +1,6 @@
-import styled from 'styled-components'
-import {Images} from '../data'
+import styled, { css } from 'styled-components'
+//import {Images} from '../data'
+import infoPattern from '../images/seamless-sports-pattern-background_98292-4294_smaller.png'
 
 const Container = styled.div`
     width: 100%;
@@ -9,15 +10,19 @@ const Container = styled.div`
     align-items: center;
     flex-direction: column;
 `
+const WrapperBackground =
+    css`
+        background: url(${infoPattern});
+`
 
 const Wrapper = styled.div`
+    ${props => (props.direction==='right' ? WrapperBackground : "background:'';")};
     width: ${props => props.direction === 'right' ? "100%" : "70%"};
     display: flex;
     justify-content: center;
     align-items: center;
     clip-path: polygon(0 18%, 100% 0, 100% 82%, 0% 100%);
     padding: 5% 0;
-    background-color: ${props => props.direction === 'right' ? "whitesmoke" : ""};
     @media (max-width: 1120px) {
         padding: 10% 0;
   }

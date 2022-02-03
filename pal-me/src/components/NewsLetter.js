@@ -1,6 +1,6 @@
 import { MdSend } from 'react-icons/md'
 import styled from 'styled-components'
-import newsPicture from '../images/Return_of_Sports_transparent_6.png'
+import newsPicture from '../images/soccer-field-football-background-green-court-pattern-lawn-148793775_smaller.png'
 
 
 
