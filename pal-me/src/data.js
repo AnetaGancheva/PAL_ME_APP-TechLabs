@@ -11,18 +11,18 @@ import img10 from './images/find-local-players-small.jpg'
 export const Reviews =  [
     {
         id:1,
-        text: "It's super handy, helped me a lot",
+        text: "It's super handy, helped me a lot!",
         auhor: "Marcus, PAL-ME user"
     }, 
     {
         id:2,
-        text:"Fantastic app, definetly recommended it ",
-        auhor: "Tennis Club, PAL-ME Partner"
+        text:"Fantastic app, definetly recommended it! ",
+        auhor: "Tennis Club Amsterdam, PAL-ME Partner"
     },
     {
         id:3,
-        text: "It's super handy, helped me a lot",
-        auhor: "Marcus, PAL-ME user"
+        text: "Lovely app, 5/5 stars from me!",
+        auhor: "Andrea, PAL-ME user"
     }
 ]
 
@@ -72,8 +72,8 @@ export const ForOrganizers = [
     },
     {
         id: 3,
-        text: "Right so heres the deal. We’re going to help you do your admin in under 5 minutes a week, every week. No joke. It takes 2 minutes to set up your game the frst time and add your squad. Once it’s set up it’ll take you two taps of your phone to send out your invites and keep track of your numbers every week",
-        title: "ADMIN DONE IN FIVE MINUTES WITH SQUADBOSS",
+        text: "Are you a sports organization or a club with the need to advertise open places? Now you can do not only this but also all of the admin work in under than five minutes! No joke. It takes two minutes to set up your account and advertise your very first game. Once it is set up, you can send out some invites with just a few taps on your phone and keep track of your numbers every week!",
+        title: "ADMIN DONE IN UNDER FIVE MINUTES",
         image: img7,
         positionedImg: img8,
         direction: "left"

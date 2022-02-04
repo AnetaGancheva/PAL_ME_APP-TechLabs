@@ -1,8 +1,8 @@
-import { GlobalContext } from "../Context";
-import {useContext} from 'react';
+//import { GlobalContext } from "../Context";
+//import {useContext} from 'react';
 import styled from 'styled-components';
 import {MdPeopleAlt, MdPlace} from 'react-icons/md'
-import { type } from "@testing-library/user-event/dist/type";
+//import { type } from "@testing-library/user-event/dist/type";
 
 const RadioContainer = styled.div`
     padding: 10px 20px;
@@ -34,7 +34,7 @@ const RadioLabel = styled.label`
 
 const RadioInput = () => {
 
-    const {isChecked, handleRadioChecked} = useContext(GlobalContext)
+    //const {isChecked, handleRadioChecked} = useContext(GlobalContext)
 
   return ( <RadioContainer>
       <Input type="radio" id="searchType1"  />
