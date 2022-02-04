@@ -1,21 +1,16 @@
 import styled from 'styled-components';
 import { Form } from 'react-bootstrap';
+import '../stylingFormsAndSelectFields.css';
 
 const Option = styled.option`
-    border: 3px solid teal;
+    border: 1px solid lightgray;
     border-radius: 4px;
-
-    $:hover {
-        background-color: rgb(0,64,64);
-        color: white;
-    }
+    background-color: rgb(228,242,227);
 `
-
-
 
 const SelectInput = ({options}) => {
   return (
-    <Form.Select aria-label="Default select example" size="lg" style={{padding: "20px", borderRadius: "4px",border:"2px solid teal", cursor: "pointer" }}>
+    <Form.Select aria-label="Default select example" size="lg" className="form-style">
         <Option>All</Option>
         {options.map( (option,index) => <Option value={index}>{option.value}</Option>)}
 </Form.Select>

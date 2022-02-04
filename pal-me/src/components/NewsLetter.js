@@ -1,7 +1,7 @@
 import { MdSend } from 'react-icons/md'
 import styled from 'styled-components'
 import newsPicture from '../images/soccer-field-football-background-green-court-pattern-lawn-148793775_smaller.png'
-
+import '../stylingFormsAndSelectFields.css'
 
 
 const  Container =  styled.div`
@@ -31,6 +31,7 @@ const InputContainer = styled.div`
     display:flex;
     justify-content: space-between;
     border: 1px solid lightgrey;
+    border-radius: 4px;
 `
 
 const Input = styled.input`
@@ -43,6 +44,7 @@ const Button = styled.button`
     border:none;
     background-color: teal;
     color: white;
+    border-radius: 4px;
 `
 
 const Newsletter = () => {
@@ -51,7 +53,7 @@ const Newsletter = () => {
             <Title>Newsletter</Title>
             <Desc>Get timely updates for PAl-ME sports events, updates, bug fixes and more...</Desc>
             <InputContainer>
-                <Input placeholder='Your email'/>
+                <Input className="newsletter-style" placeholder='Your email'/>
                 <Button>
                     <MdSend />
                 </Button>

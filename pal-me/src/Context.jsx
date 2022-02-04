@@ -13,7 +13,7 @@ export const GlobalProvider = ({children}) => {
     // checked state for the radio button in the search component, which is on of the two options "player" or "clubs"
     const [isChecked, setIsChecked] = useState(true); 
     // dropdown select form for showing options for sports on find a player etc
-    const[isSelected, setIsSelected] = useState(true);
+    const[isSelected, setIsSelected] = useState(false);
 
     // actions 
     const handleNavToggle = () => {
@@ -37,7 +37,7 @@ export const GlobalProvider = ({children}) => {
     }
 
     const handleMouseEnterFormSelect = () => {
-        setIsSelected((prevState) => !prevState);
+        setIsSelected((prevState) => !prevState)
     }
 
     return (<GlobalContext.Provider value={{
