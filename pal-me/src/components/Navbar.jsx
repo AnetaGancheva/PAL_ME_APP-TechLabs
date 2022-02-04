@@ -122,7 +122,7 @@ const Navbar = () => {
        <>
             <Container>
                 <Left>
-                    <Logo />
+                   <Link to="/"><Logo /></Link>
                 </Left>
                     <Center>
                         <NavLink to="/" >Home</NavLink>
