@@ -1,8 +1,5 @@
-import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { GlobalContext } from '../Context'
-import { GoSignOut} from "react-icons/go";
 
 
 const Container = styled.div`
@@ -33,7 +30,7 @@ const NavLink = styled(Link)`
     margin: 0 1%;
 `
 
-const NavButton = styled.button`
+/*const NavButton = styled.button`
     background: transparent;
     border: none;
     cursor: pointer;
@@ -42,10 +39,9 @@ const NavButton = styled.button`
     font-size: 1.2rem;
     padding: 1% 0;
 ` 
+*/
 
 const UserNavbar = ({isLogged}) => {
-
-    const {handleNavToggle} = useContext(GlobalContext)
 
     return (
        <Container isLogged={isLogged}>
@@ -56,7 +52,6 @@ const UserNavbar = ({isLogged}) => {
                 <NavLink to="" >Account</NavLink>
                 <NavLink to="/" >Messages</NavLink>
                 <NavLink to="/" >Dashboard</NavLink>
-                <NavButton onClick={() => handleNavToggle()}><GoSignOut/></NavButton>
             </Right>
         </Container>
     )

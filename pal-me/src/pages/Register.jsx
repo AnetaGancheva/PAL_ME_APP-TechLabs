@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+//import { Link } from 'react-router-dom'
 import backgroundImg from '../images/register-background.jpg'
 
 const Container = styled.div`
