@@ -7,6 +7,7 @@ import Players from './pages/Players';
 import Register from './pages/Register';
 import Organizers from './pages/Organizers';
 import FindPlayers from './pages/FindPlayers'
+import FindClubs from './pages/FindClubs';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="players" element={<Players/>}/>
             <Route path="organizers" element={<Organizers/>}/>
-            <Route path="findPlayer" element={<FindPlayers/>}/>
+            <Route path="findplayer" element={<FindPlayers/>}/>
+            <Route path="findclub" element={<FindClubs/>}/>
           </Routes>
         </Router>
     </GlobalProvider>

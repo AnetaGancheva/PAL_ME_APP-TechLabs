@@ -126,8 +126,8 @@ const Navbar = () => {
                 </Left>
                     <Center>
                         <NavLink to="/" >Home</NavLink>
-                        <NavLink to="/findPlayer">Find a Player</NavLink>
-                        <NavLink to="/findGame">Find a Game</NavLink>
+                        <NavLink to="/findplayer">Find a Player</NavLink>
+                        <NavLink to="/findclub">Find a Club</NavLink>
                         <NavLink to="/players">Information for Players</NavLink>
                         <NavLink to="/organizers">Information for Organizers</NavLink>
                     </Center>
