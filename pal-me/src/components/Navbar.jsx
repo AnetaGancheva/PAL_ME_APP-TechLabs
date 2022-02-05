@@ -43,9 +43,8 @@ const NavLink = styled(Link)`
     font-size: 1.1rem;
     margin: 0 3%;
     &:hover {
-        background-color: teal;
-        border-radius: 5%;
         font-weight: bold;
+        color: white;
     }
 `
 const Right = styled.div`
@@ -64,7 +63,10 @@ const NavButton = styled.button`
     font-size: 1.8rem;
 
     &:hover {
-        background-color: #1e1d1d;
+        border-radius: 50%;
+        font-weight: bold;
+        color: white;
+        box-shadow: 0px 0px 4px teal;
     }
 ` 
 const DropdownMenu = styled.div`
@@ -83,7 +85,8 @@ const DropdownMenu = styled.div`
        padding: 10px 11px;
 
        &:hover {
-        background-color: teal;
+        font-weight: bold;
+        color: white;
     }
 
     }
@@ -108,7 +111,8 @@ const DropdownUserMenu = styled.div`
        padding: 10px 11px;
 
        &:hover {
-        background-color: teal;
+        font-weight: bold;
+        color: white;
     }
 
     }

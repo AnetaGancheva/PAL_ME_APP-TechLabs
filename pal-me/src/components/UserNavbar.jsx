@@ -21,13 +21,18 @@ const Right = styled.div`
     flex: 1;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: left;
 `
 const NavLink = styled(Link)`
     text-decoration: none;
     color: white;
     font-size: 1.1rem;
     margin: 0 1%;
+
+    &:hover {
+        font-weight: bold;
+        color: white;
+    }
 `
 
 /*const NavButton = styled.button`
@@ -49,9 +54,8 @@ const UserNavbar = ({isLogged}) => {
                 Welcome, Username
             </Left>
             <Right>
-                <NavLink to="" >Account</NavLink>
-                <NavLink to="/" >Messages</NavLink>
-                <NavLink to="/" >Dashboard</NavLink>
+                <NavLink to="/messages">Messages</NavLink>
+                <NavLink to="/newsfeed">News</NavLink>
             </Right>
         </Container>
     )
