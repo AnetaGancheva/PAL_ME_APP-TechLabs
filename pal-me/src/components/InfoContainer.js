@@ -28,53 +28,53 @@ const Wrapper = styled.div`
   }
 `
 const TextContainer = styled.div`
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between ;
-    align-items: flex-start;
-    margin: 0 3% ;
+    flex: 2 !important;
+    display: flex !important; 
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    margin: 0 3% !important;
 `
 const Title = styled.h2`
-    text-transform: uppercase;
-    color: #464646
+    text-transform: uppercase !important;
+    color: #464646 !important;
 `
 const Hr = styled.div`
-    width: 55px;
-    height: 4px;
-    background-color: teal;
-    margin: 3% 0;
+    width: 55px !important;
+    height: 4px !important;
+    background-color: teal !important;
+    margin: 3% 0 !important;
 `
 const Desc = styled.p`
-    color: #464646;
+    color: #464646 !important;
 `
 
 const ImgContainer = styled.div`
-    flex: 2;
-    position: relative;
+    flex: 2 !important;
+    position: relative !important;
     /* width: 100%; */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
 
 `
 const Img = styled.img`
-    border-radius: 6px;
-    display: block;
-    margin: 0;
-    padding: 0;
+    border-radius: 6px !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
 `
 const PositonedImg = styled.img`
-    display: block;
-    border-radius: 6px;
-    position: absolute;
-    bottom: -10%;
-    right: ${props => props.direction === "left" ?  "0" : "170px" };
-    box-shadow: 0px 0px 15px 0px #cccccc;
+    display: block !important;
+    border-radius: 6px !important;
+    position: absolute !important;
+    bottom: -10% !important;
+    right: ${props => props.direction === "left" ?  "0" : "170px" } !important;
+    box-shadow: 0px 0px 15px 0px #cccccc !important;
 
     @media (max-width: 1120px) {
-        width: 50%;
+        width: 50% !important;
   }
 ` 
 const InfoContainer = ({item}) => {

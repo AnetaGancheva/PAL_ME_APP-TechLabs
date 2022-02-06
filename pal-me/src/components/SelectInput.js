@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Form } from 'react-bootstrap';
-import '../stylingFormsAndSelectFields.css';
+import '../additionalStyles.css';
 
 const Option = styled.option`
     border: 1px solid lightgray;
@@ -8,7 +8,7 @@ const Option = styled.option`
     background-color: rgb(228,242,227);
 `
 
-const SelectInput = ({options}) => {
+const SelectInput = ({options}) => { 
   return (
     <Form.Select aria-label="Default select example" size="lg" className="form-style">
         <Option>All</Option>

@@ -17,8 +17,8 @@ const Messages = () => {
                             <img width="64" hieght="60" src="https://i.pravatar.cc/300" />
                         </a>
                         <div class="user-name">
-                            <h5><a href="#">Username</a></h5>
-                            <span><a href="#">username@palme.nl</a></span>
+                            <h5><a href="/messages">Username</a></h5>
+                            <span><a href="/messages">username@palme.nl</a></span>
                         </div>
                         <a class="mail-dropdown pull-right" href="javascript:;">
                             <i class="fa fa-chevron-down"></i>
@@ -78,66 +78,66 @@ const Messages = () => {
       </div>
       <ul class="inbox-nav inbox-divider">
         <li class="active">
-          <a href="#"><i class="fa fa-inbox"></i> Inbox <span class="label label-danger pull-right">2</span></a>
+          <a href="/messages"><i class="fa fa-inbox"></i> Inbox <span class="label label-danger pull-right">2</span></a>
 
         </li>
         <li>
-          <a href="#"><i class="fa fa-envelope-o"></i> Sent Mail</a>
+          <a href="/messages"><i class="fa fa-envelope-o"></i> Sent Mail</a>
         </li>
         <li>
-          <a href="#"><i class="fa fa-bookmark-o"></i> Important</a>
+          <a href="/messages"><i class="fa fa-bookmark-o"></i> Important</a>
         </li>
         <li>
-          <a href="#"><i class=" fa fa-external-link"></i> Drafts <span class="label label-info pull-right">30</span></a>
+          <a href="/messages"><i class=" fa fa-external-link"></i> Drafts <span class="label label-info pull-right">30</span></a>
         </li>
         <li>
-          <a href="#"><i class=" fa fa-trash-o"></i> Trash</a>
+          <a href="/messages"><i class=" fa fa-trash-o"></i> Trash</a>
         </li>
       </ul>
       <ul class="nav nav-pills nav-stacked labels-info inbox-divider">
         <li>
           <h4>Labels</h4> </li>
         <li>
-          <a href="#"> <i class=" fa fa-sign-blank text-danger"></i> Football </a>
+          <a href="/messages"> <i class=" fa fa-sign-blank text-danger"></i> Football </a>
         </li>
         <li>
-          <a href="#"> <i class=" fa fa-sign-blank text-success"></i> Yoga </a>
+          <a href="/messages"> <i class=" fa fa-sign-blank text-success"></i> Yoga </a>
         </li>
         <li>
-          <a href="#"> <i class=" fa fa-sign-blank text-info "></i> Basketball </a>
+          <a href="/messages"> <i class=" fa fa-sign-blank text-info "></i> Basketball </a>
         </li>
         <li>
-          <a href="#"> <i class=" fa fa-sign-blank text-warning "></i> Friends </a>
+          <a href="/messages"> <i class=" fa fa-sign-blank text-warning "></i> Friends </a>
         </li>
         <li>
-          <a href="#"> <i class=" fa fa-sign-blank text-primary "></i> Others </a>
+          <a href="/messages"> <i class=" fa fa-sign-blank text-primary "></i> Others </a>
         </li>
       </ul>
       <ul class="nav nav-pills nav-stacked labels-info ">
         <li>
           <h4>palMe Buddy online</h4> </li>
         <li>
-          <a href="#"> <i class=" fa fa-circle text-success"></i>John Doe
+          <a href="/messages"> <i class=" fa fa-circle text-success"></i>John Doe
             <p>Yes sure I get</p>
           </a>
         </li>
         <li>
-          <a href="#"> <i class=" fa fa-circle text-danger"></i>Jane Doe
+          <a href="/messages"> <i class=" fa fa-circle text-danger"></i>Jane Doe
             <p>Busy with training</p>
           </a>
         </li>
         <li>
-          <a href="#"> <i class=" fa fa-circle text-muted "></i>Best Friend
+          <a href="/messages"> <i class=" fa fa-circle text-muted "></i>Best Friend
             <p>Wanna meet up?</p>
           </a>
         </li>
         <li>
-          <a href="#"> <i class=" fa fa-circle text-muted "></i>Someone Else
+          <a href="/messages"> <i class=" fa fa-circle text-muted "></i>Someone Else
             <p>I am not there</p>
           </a>
         </li>
         <li>
-          <a href="#"> <i class=" fa fa-circle text-muted "></i>Family Member
+          <a href="/messages"> <i class=" fa fa-circle text-muted "></i>Family Member
             <p>I am okay, thank</p>
           </a>
         </li>
@@ -177,55 +177,55 @@ const Messages = () => {
           <div class="chk-all">
             <input type="checkbox" class="mail-checkbox mail-group-checkbox" />
             <div class="btn-group">
-              <a data-toggle="dropdown" href="#" class="btn mini all" aria-expanded="false">
+              <a data-toggle="dropdown" href="/messages" class="btn mini all" aria-expanded="false">
                                          All
                                          <i class="fa fa-angle-down "></i>
                                      </a>
               <ul class="dropdown-menu">
-                <li><a href="#"> None</a></li>
-                <li><a href="#"> Read</a></li>
-                <li><a href="#"> Unread</a></li>
+                <li><a href="/messages"> None</a></li>
+                <li><a href="/messages"> Read</a></li>
+                <li><a href="/messages"> Unread</a></li>
               </ul>
             </div>
           </div>
 
           <div class="btn-group">
-            <a data-original-title="Refresh" data-placement="top" data-toggle="dropdown" href="#" class="btn mini tooltips">
+            <a data-original-title="Refresh" data-placement="top" data-toggle="dropdown" href="/messages" class="btn mini tooltips">
               <i class=" fa fa-refresh"></i>
             </a>
           </div>
           <div class="btn-group hidden-phone">
-            <a data-toggle="dropdown" href="#" class="btn mini blue" aria-expanded="false">
+            <a data-toggle="dropdown" href="/messages" class="btn mini blue" aria-expanded="false">
                                      More
                                      <i class="fa fa-angle-down "></i>
                                  </a>
             <ul class="dropdown-menu">
-              <li><a href="#"><i class="fa fa-pencil"></i> Mark as Read</a></li>
-              <li><a href="#"><i class="fa fa-ban"></i> Spam</a></li>
+              <li><a href="/messages"><i class="fa fa-pencil"></i> Mark as Read</a></li>
+              <li><a href="/messages"><i class="fa fa-ban"></i> Spam</a></li>
               <li class="divider"></li>
-              <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+              <li><a href="/messages"><i class="fa fa-trash-o"></i> Delete</a></li>
             </ul>
           </div>
           <div class="btn-group">
-            <a data-toggle="dropdown" href="#" class="btn mini blue">
+            <a data-toggle="dropdown" href="/messages" class="btn mini blue">
                                      Move to
                                      <i class="fa fa-angle-down "></i>
                                  </a>
             <ul class="dropdown-menu">
-              <li><a href="#"><i class="fa fa-pencil"></i> Mark as Read</a></li>
-              <li><a href="#"><i class="fa fa-ban"></i> Spam</a></li>
+              <li><a href="/messages"><i class="fa fa-pencil"></i> Mark as Read</a></li>
+              <li><a href="/messages"><i class="fa fa-ban"></i> Spam</a></li>
               <li class="divider"></li>
-              <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+              <li><a href="/messages"><i class="fa fa-trash-o"></i> Delete</a></li>
             </ul>
           </div>
 
           <ul class="unstyled inbox-pagination">
             <li><span>1-4 of 4</span></li>
             <li>
-              <a class="np-btn" href="#"><i class="fa fa-angle-left  pagination-left"></i></a>
+              <a class="np-btn" href="/messages"><i class="fa fa-angle-left  pagination-left"></i></a>
             </li>
             <li>
-              <a class="np-btn" href="#"><i class="fa fa-angle-right pagination-right"></i></a>
+              <a class="np-btn" href="/messages"><i class="fa fa-angle-right pagination-right"></i></a>
             </li>
           </ul>
         </div>

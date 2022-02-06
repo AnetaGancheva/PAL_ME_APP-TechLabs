@@ -1,18 +1,20 @@
 import React from 'react';
 import styled from 'styled-components'
 const Button = styled.button`
-    background-color: teal;
-    border-radius: 4px;
-    color: white;
-    width: 140px;
-    height: 50px;
-    border: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    transition: all 0.5s ease-in-out;
-    margin-right:  5%;
-    cursor: pointer;
+    padding-top: 2.5% !important;
+    padding-bottom: 2px !important;
+    background-color: teal !important;
+    border-radius: 4px !important;
+    color: white !important;
+    width: 140px !important;
+    height: 50px !important;
+    border: none !important;
+    display: flex !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+    transition: all 0.5s ease-in-out !important;
+    margin-right:  5% !important;
+    cursor: pointer !important;
 
     &:hover{
         transform: translateY(-4px) ;

@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import '../additionalStyles.css'
 
 
 const Container = styled.div`
     height: ${props => props.isLogged ?  '5vh' : '0' };
     overflow: hidden;
     background-color: teal;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4) );
     color: white;
     display: flex;
     justify-content: space-between;
@@ -30,9 +32,10 @@ const NavLink = styled(Link)`
     margin: 0 1%;
 
     &:hover {
-        font-weight: bold;
-        color: white;
     }
+`
+const HooverNavLink = styled.span`
+    
 `
 
 /*const NavButton = styled.button`
@@ -54,8 +57,8 @@ const UserNavbar = ({isLogged}) => {
                 Welcome, Username
             </Left>
             <Right>
-                <NavLink to="/messages">Messages</NavLink>
-                <NavLink to="/newsfeed">News</NavLink>
+                <NavLink to="/messages"><HooverNavLink className="navbar-link">Messages</HooverNavLink></NavLink>
+                <NavLink to="/newsfeed"><HooverNavLink className="navbar-link">News</HooverNavLink></NavLink>
             </Right>
         </Container>
     )

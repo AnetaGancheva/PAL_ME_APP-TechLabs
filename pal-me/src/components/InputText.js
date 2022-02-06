@@ -1,6 +1,6 @@
 import { Label } from 'recharts';
 import styled from 'styled-components';
-import '../stylingFormsAndSelectFields.css'
+import '../additionalStyles.css'
 
 const Input = styled.input`
     padding: 20px 15px;

@@ -1,7 +1,7 @@
 import { MdSend } from 'react-icons/md'
 import styled from 'styled-components'
 import newsPicture from '../images/soccer-field-football-background-green-court-pattern-lawn-148793775_smaller.png'
-import '../stylingFormsAndSelectFields.css'
+import '../additionalStyles.css'
 
 
 const  Container =  styled.div`
