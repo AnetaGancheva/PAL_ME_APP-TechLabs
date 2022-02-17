@@ -1,10 +1,12 @@
 import styled from 'styled-components';
+import CoverPhoto from '../images/ball_30op.png'
 
 const Container = styled.div`
     width: 100%;
     height: 30vh;
     background-color: teal;
-    background-image: linear-gradient( to top, rgba(255,255,255,0.2), rgba(255,255,255,0.4));
+    background-image: url(${CoverPhoto});
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;

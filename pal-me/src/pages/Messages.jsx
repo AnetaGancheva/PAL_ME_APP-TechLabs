@@ -1,9 +1,12 @@
+/* as seen in and inspired by https://codepen.io/danielyewright/pen/EgYVxw */
+
 import Navbar from '../components/Navbar';
-//import styled from 'styled-components';
 import React from 'react';
+import 'font-awesome/css/font-awesome.min.css'; 
 import '../stylingFormsAndSelectFields.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'font-awesome/css/font-awesome.min.css'; 
+
+
 
 const Messages = () => {
     return(
@@ -13,19 +16,19 @@ const Messages = () => {
             <div class="mail-box">
                 <aside class="sm-side">
                     <div class="user-head">
-                        <a class="inbox-avatar" href="javascript:;">
-                            <img width="64" hieght="60" src="https://i.pravatar.cc/300" />
+                        <a class="inbox-avatar" href="/messages">
+                            <img alt="avatar" width="64" hieght="60" src="https://i.pravatar.cc/300" />
                         </a>
                         <div class="user-name">
                             <h5><a href="/messages">Username</a></h5>
                             <span><a href="/messages">username@palme.nl</a></span>
                         </div>
-                        <a class="mail-dropdown pull-right" href="javascript:;">
+                        <a class="mail-dropdown pull-right" href="/messages">
                             <i class="fa fa-chevron-down"></i>
                         </a>
                     </div>
                 <div class="inbox-body">
-                    <a href="#myModal" data-toggle="modal" title="Compose" class="btn btn-compose"> Compose </a>
+                    <a href="/messages" data-toggle="modal" title="Compose" class="btn btn-compose"> Compose </a>
                     <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade" style={{display: 'none'}}>
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -34,7 +37,7 @@ const Messages = () => {
                                     <h4 class="modal-title">Compose</h4>
                                 </div>
                                 <div class="modal-body">
-                                    <form role="form" class="form-horizontal">
+                                    <form class="form-horizontal">
                                         <div class="form-group">
                                             <label class="col-lg-2 control-label">To</label>
                                             <div class="col-lg-10">
@@ -145,17 +148,17 @@ const Messages = () => {
 
       <div class="inbox-body text-center">
         <div class="btn-group">
-          <a class="btn mini btn-primary" href="javascript:;">
+          <a class="btn mini btn-primary" href="/messages">
             <i class="fa fa-plus"></i>
           </a>
         </div>
         <div class="btn-group">
-          <a class="btn mini btn-success" href="javascript:;">
+          <a class="btn mini btn-success" href="/messages">
             <i class="fa fa-phone"></i>
           </a>
         </div>
         <div class="btn-group">
-          <a class="btn mini btn-info" href="javascript:;">
+          <a class="btn mini btn-info" href="/messages">
             <i class="fa fa-cog"></i>
           </a>
         </div>

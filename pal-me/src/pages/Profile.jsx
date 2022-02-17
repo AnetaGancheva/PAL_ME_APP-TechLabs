@@ -2,20 +2,20 @@ import Navbar from '../components/Navbar';
 import styled from "styled-components";
 import FormGroup from '../components/FormGroup';
 import ProfileEditPhoto from '../images/racetrack.png';
+import CoverPhoto from '../images/ball_30op.png'
 import SelectInput from '../components/SelectInput';
 import {Sports} from '../data';
 import InputText from '../components/InputText';
 
 const Profilepic = styled.div`
-  width: 120px;
-  height: 115px;
+  width: 188px;
+  height: 188px;
   margin-right: 38px;
   background: #e48307;
   /* border-radius: 8px; */
-  margin: auto;
   background-image: url("https://i.pravatar.cc/300");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
 `
 
 const Main = styled.div`
@@ -87,17 +87,18 @@ const Form = styled.form`
 const Container = styled.div`
     width: 100%;
     height: 30vh;
-    background-color: teal;
-    background-image: linear-gradient( to top, rgba(255,255,255,0.2), rgba(255,255,255,0.4));
+    background-image: url(${CoverPhoto});
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
 `
 const Title = styled.h1`
     color: white;
-    text-align: center;
+    text-align: left;
     padding-top: 5px;
     padding-bottom: 2px;
+    border-radius: 4px;
 `
 const Span = styled.span`
     font-size: 3rem ;
@@ -109,7 +110,7 @@ const Profile =() => {
         <Navbar />
         <Main>
             <Container>
-                <Title><Span>Edit profile</Span></Title> 
+                <Span><Title>Edit profile</Title></Span> 
             </Container>
           <Hr />
           <FlexContainer>
@@ -126,6 +127,10 @@ const Profile =() => {
                     <FormGroup title="Confirm new password" input={<InputText/>}/>
                     <Button>Save</Button>
               </Form>
+              </Card>
+              <Card>
+              </Card>
+              <Card>
               <Form>
               <FormGroup title="Favourite Sport" input={<SelectInput options={Sports}/>}/>
               <FormGroup title="Gender" input={<SelectInput options={[{value: "female"}, {value : "male"}]}/>}/>
