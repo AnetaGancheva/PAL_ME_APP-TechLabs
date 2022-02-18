@@ -2,7 +2,7 @@
 
 import Navbar from '../components/Navbar';
 import React from 'react';
-// import 'font-awesome/css/font-awesome.min.css'; 
+import 'font-awesome/css/font-awesome.min.css'; 
 import '../stylingFormsAndSelectFields.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 

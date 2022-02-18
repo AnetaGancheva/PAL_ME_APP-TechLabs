@@ -9,7 +9,7 @@ import Organizers from './pages/Organizers';
 import FindPlayers from './pages/FindPlayers'
 import FindClubs from './pages/FindClubs';
 import Messages from './pages/Messages';
-import Profile from './pages/Profile';
+import Profile1 from './pages/Profile1';
 import Newsfeed from './pages/Newsfeed'
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
             <Route path="findplayer" element={<FindPlayers/>}/>
             <Route path="findclub" element={<FindClubs/>}/>
             <Route path="/messages" element={<Messages/>}/>
-            <Route path="/profile" element={<Profile/>}/>
+            <Route path="/profile" element={<Profile1/>}/>
             <Route path="/newsfeed" element={<Newsfeed/>}/>
           </Routes>
         </Router>
