@@ -9,8 +9,14 @@ import Organizers from './pages/Organizers';
 import FindPlayers from './pages/FindPlayers'
 import FindClubs from './pages/FindClubs';
 import Messages from './pages/Messages';
+<<<<<<< Updated upstream
 import Profile1 from './pages/Profile1';
 import Newsfeed from './pages/Newsfeed'
+=======
+import Profile from './pages/Profile';
+import Newsfeed from './pages/Newsfeed';
+import Map from './pages/Map';
+>>>>>>> Stashed changes
 
 function App() {
   return (
@@ -27,6 +33,7 @@ function App() {
             <Route path="/messages" element={<Messages/>}/>
             <Route path="/profile" element={<Profile1/>}/>
             <Route path="/newsfeed" element={<Newsfeed/>}/>
+            <Route path="/map" element={<Map />} />
           </Routes>
         </Router>
     </GlobalProvider>
