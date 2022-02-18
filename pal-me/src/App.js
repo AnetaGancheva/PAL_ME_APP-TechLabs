@@ -9,14 +9,9 @@ import Organizers from './pages/Organizers';
 import FindPlayers from './pages/FindPlayers'
 import FindClubs from './pages/FindClubs';
 import Messages from './pages/Messages';
-<<<<<<< Updated upstream
 import Profile1 from './pages/Profile1';
 import Newsfeed from './pages/Newsfeed'
-=======
-import Profile from './pages/Profile';
-import Newsfeed from './pages/Newsfeed';
 import Map from './pages/Map';
->>>>>>> Stashed changes
 
 function App() {
   return (
