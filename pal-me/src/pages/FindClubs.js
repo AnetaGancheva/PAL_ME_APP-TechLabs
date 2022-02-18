@@ -7,14 +7,17 @@ import InputText from '../components/InputText';
 import FormGroup from '../components/FormGroup';
 import SelectInput from '../components/SelectInput';
 import {Sports} from '../data'
-import map from '../images/map.png'
-import styled from 'styled-components';
+//import map from '../images/map.png'
+//import styled from 'styled-components';
+import {Navigate} from 'react-router'
 
-const Image = styled.img`
+/*const Image = styled.img`
   width: 100%;;
   border: teal dashed 2px;
   border-radius: 4px;
 `
+*/
+
 const FindClubs = () => {
   const {isValid} = useContext(GlobalContext)
   return <>
@@ -24,7 +27,7 @@ const FindClubs = () => {
         <FormGroup title="sport(s)" input={<SelectInput options={Sports}/>}/>
         <FormGroup title="sport(s)" input={<SelectInput options={[{value:"indoor"}, {value:"outdoor"}]}/>}/>
     </Search>
-    { isValid ?  <Image src={map}/> : ''}
+    { isValid ?  <Navigate to="/map" /> : ''}
     <Footer/>
   </>;
 };

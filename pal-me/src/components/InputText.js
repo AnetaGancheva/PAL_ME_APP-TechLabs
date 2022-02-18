@@ -14,7 +14,7 @@ const Error = styled.p`
    border-radius: 4px;
    padding: 0 1%;
    width: 70%
-`
+` 
 
 const InputText = () => {
   const {handlePostcodeInput, error} = useContext(GlobalContext)
