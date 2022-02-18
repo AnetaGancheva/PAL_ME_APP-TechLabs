@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
 const Input = styled.input`
-    padding: 2%;
-    margin: 2% 0;
+    padding: 1%;
+    margin: 1% 0;
     width: 50%;
+    border-radius: 4px;
+    border: none;
 `
 const Label = styled.label`
   font-size: 20px;

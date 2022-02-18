@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 const Select = styled.select`
-  padding: 2%;
-    margin: 2% 0;
+  padding: 1%;
+    margin: 1% 0;
     width: 50%;
+    border-radius: 4px;
 `
 const Option = styled.option`
     border: 1px solid lightgray;

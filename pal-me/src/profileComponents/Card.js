@@ -5,8 +5,8 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     /* align-items: center; */
-    margin: 2%;
-    padding: 2%;
+    margin: 1%;
+    padding: 1% 2%;
     width: 60%;
     border: teal 2px solid;
     border-radius: 4px;
