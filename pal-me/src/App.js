@@ -8,6 +8,9 @@ import Register from './pages/Register';
 import Organizers from './pages/Organizers';
 import FindPlayers from './pages/FindPlayers'
 import FindClubs from './pages/FindClubs';
+import Messages from './pages/Messages';
+import Profile from './pages/Profile';
+import Newsfeed from './pages/Newsfeed'
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
             <Route path="organizers" element={<Organizers/>}/>
             <Route path="findplayer" element={<FindPlayers/>}/>
             <Route path="findclub" element={<FindClubs/>}/>
+            <Route path="/messages" element={<Messages/>}/>
+            <Route path="/profile" element={<Profile/>}/>
+            <Route path="/newsfeed" element={<Newsfeed/>}/>
           </Routes>
         </Router>
     </GlobalProvider>

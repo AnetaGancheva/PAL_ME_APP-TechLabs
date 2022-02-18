@@ -5,6 +5,7 @@ import {MdOutlineAccountCircle, MdArrowDropDown} from "react-icons/md"
 import UserNavbar from './UserNavbar'
 import { GlobalContext } from '../Context'
 import palMeLogo from '../images/palMeLogo_103x50BW.png'
+import '../additionalStyles.css'
 
 
 const Container = styled.div`
@@ -13,7 +14,11 @@ const Container = styled.div`
     // left: 0;
     // z-index: 1;
     height: 8vh;
-    background-color: rgb(0,64,64);
+    background-image: linear-gradient(
+      rgb(0,64,64),
+      teal
+    );
+    /*background-color: rgb(0,64,64);*/
     color: white;
     display: flex;
     justify-content: space-around;
@@ -42,10 +47,9 @@ const NavLink = styled(Link)`
     color: white;
     font-size: 1.1rem;
     margin: 0 3%;
+    text-align: right !important;
     &:hover {
-        background-color: teal;
-        border-radius: 5%;
-        font-weight: bold;
+        color: white;
     }
 `
 const Right = styled.div`
@@ -64,7 +68,6 @@ const NavButton = styled.button`
     font-size: 1.8rem;
 
     &:hover {
-        background-color: #1e1d1d;
     }
 ` 
 const DropdownMenu = styled.div`
@@ -74,16 +77,17 @@ const DropdownMenu = styled.div`
     z-index: 1;
     background-color: rgb(0,64,64);
     color: white;
-    width: 160px;
-
-    
+    width: 110px;
+    border-radius: 4px;  
+ 
 
     ${NavLink} {
         display: block;
        padding: 10px 11px;
 
        &:hover {
-        background-color: teal;
+        font-weight: bold;
+        color: white;
     }
 
     }
@@ -99,20 +103,23 @@ const DropdownUserMenu = styled.div`
     z-index: 1;
     background-color: rgb(0,64,64);
     color: white;
-    width: 160px;
-
-    
+    width: 110px;
+    border-radius: 4px;   
 
     ${NavLink} {
         display: block;
        padding: 10px 11px;
 
        &:hover {
-        background-color: teal;
     }
 
     }
 `
+
+const HooverNavLink = styled.span`
+    
+`
+
 const Navbar = () => {
 
     const {isLogged, showDropdownMenu, handleDropdownMenu, handleLogout} = useContext(GlobalContext)
@@ -125,26 +132,26 @@ const Navbar = () => {
                    <Link to="/"><Logo /></Link>
                 </Left>
                     <Center>
-                        <NavLink to="/" >Home</NavLink>
-                        <NavLink to="/findplayer">Find a Player</NavLink>
-                        <NavLink to="/findclub">Find a Club</NavLink>
-                        <NavLink to="/players">Information for Players</NavLink>
-                        <NavLink to="/organizers">Information for Organizers</NavLink>
+                        <NavLink to="/" ><HooverNavLink className="navbar-link">Home</HooverNavLink></NavLink>
+                        <NavLink to="/findplayer"><HooverNavLink className="navbar-link">Find a Player</HooverNavLink></NavLink>
+                        <NavLink to="/findclub"><HooverNavLink className="navbar-link">Find a Club</HooverNavLink></NavLink>
+                        <NavLink to="/players"><HooverNavLink className="navbar-link">Information for Players</HooverNavLink></NavLink>
+                        <NavLink to="/organizers"><HooverNavLink className="navbar-link">Information for Organizers</HooverNavLink></NavLink>
                     </Center>
                     <Right>
                         <NavButton onClick={handleDropdownMenu}>
-                            <MdOutlineAccountCircle style={{display: isLogged ? 'inline' : 'none' }}/>
-                            <MdArrowDropDown style={{display: isLogged ? 'none' : 'inline' }} />
+                            <MdOutlineAccountCircle className="circle-icon-link" style={{display: isLogged ? 'inline' : 'none' }}/>
+                            <MdArrowDropDown className="arrow-icon-link" style={{display: isLogged ? 'none' : 'inline' }} />
                         </NavButton>
                         <DropdownMenu showMenu={showDropdownMenu} isLogged={isLogged}>
-                            <NavLink to="/login">Login</NavLink>
+                            <NavLink to="/login"><HooverNavLink className="navbar-link">Login</HooverNavLink></NavLink>
                             <Hr />
-                            <NavLink to="/register">Create An Account</NavLink>
+                            <NavLink to="/register"><HooverNavLink className="navbar-link">Create An Account</HooverNavLink></NavLink>
                         </DropdownMenu>
                         <DropdownUserMenu showMenu={showDropdownMenu} isLogged={isLogged}>
-                            <NavLink to="/profile">Profile</NavLink>
+                            <NavLink to="/profile"><HooverNavLink className="navbar-link">Profile</HooverNavLink></NavLink>
                             <Hr />
-                            <NavLink to="/" onClick={handleLogout}>Logout</NavLink>
+                            <NavLink to="/" onClick={handleLogout}><HooverNavLink className="navbar-link">Logout</HooverNavLink></NavLink>
                         </DropdownUserMenu>
 
                     </Right>          

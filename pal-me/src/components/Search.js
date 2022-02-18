@@ -16,7 +16,7 @@ const Wrapper = styled.div`
     width: 70%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
 `
 const SubmitContainer = styled.div`
     align-self: flex-end;
