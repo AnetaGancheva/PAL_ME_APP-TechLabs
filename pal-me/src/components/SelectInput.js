@@ -10,9 +10,9 @@ const Option = styled.option`
 
 const SelectInput = ({options}) => { 
   return (
-    <Form.Select aria-label="Default select example" size="lg" className="form-style">
+    <Form.Select aria-label="Default select example" className="form-style">
         <Option>All</Option>
-        {options.map( (option,index) => <Option value={index}>{option.value}</Option>)}
+        {options.map( (option,index) => <Option key={index}>{option.value}</Option>)}
 </Form.Select>
   );
 };

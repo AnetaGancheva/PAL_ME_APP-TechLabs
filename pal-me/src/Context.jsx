@@ -14,6 +14,11 @@ export const GlobalProvider = ({children}) => {
     const [isChecked, setIsChecked] = useState(true); 
     // dropdown select form for showing options for sports on find a player etc
     const[currentEmailId, setCurrentEMailId]=useState(null);
+    // state for postcode in the text input
+    const [postcodeInput, setPostcodeInput] = useState('')
+    // for invalid inputs 
+    const [error, setError]  = useState('')
+    const [isValid, setIsValid]  = useState(false)
 
     // actions 
     const handleNavToggle = () => {
@@ -40,16 +45,36 @@ export const GlobalProvider = ({children}) => {
         setCurrentEMailId(email_id);
     }
 
+    // to handle the text input when the user enter a post code
+    const handlePostcodeInput = (e) => {
+        setPostcodeInput(e.target.value)
+    }
+
+    const handleSubmit = () => {
+        const regex = /^[1-9][0-9]{3} ?(?!sa|sd|ss)[a-z]{2}$/
+        if (postcodeInput.match(regex)){
+            setIsValid(true)
+            setError('')
+        } else {
+            setError("Please Enter A Valid Postcode ")
+            setIsValid(false)
+        }
+    }
     return (<GlobalContext.Provider value={{
         isLogged,
         showDropdownMenu,
         isChecked,
         currentEmailId,
+        postcodeInput,
+        error,
+        isValid,
+        handlePostcodeInput,
         handleRadioChecked,
         handleNavToggle,
         handleDropdownMenu,
         handleLogout,
-        setCurrentEMailId
+        setCurrentEMailId,
+        handleSubmit
     } }>
         {children}
     </GlobalContext.Provider>)

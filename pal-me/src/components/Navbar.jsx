@@ -124,7 +124,6 @@ const Navbar = () => {
 
     const {isLogged, showDropdownMenu, handleDropdownMenu, handleLogout} = useContext(GlobalContext)
   
-    console.log(showDropdownMenu)
     return (
        <>
             <Container>

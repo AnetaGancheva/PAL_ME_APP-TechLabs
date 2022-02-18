@@ -1,11 +1,13 @@
-import React from 'react';
+import { GlobalContext } from '../Context'
+import {useContext} from 'react';
 import styled from 'styled-components';
 import Button from './SearchButton'
 import backgroundPhoto from "../images/Search_photo_transparent_3.png"
 
+
 const Container = styled.div`
     width: 100%;
-    height: 40vh;
+    height: ${props => props.isValid ? "20vh" : props.height};
     background: url(${backgroundPhoto});
     background-size: cover;
     display: flex;
@@ -19,12 +21,13 @@ const Wrapper = styled.div`
     justify-content: center;
 `
 const SubmitContainer = styled.div`
-    align-self: flex-end;
+    align-self: center;
     margin-bottom: 3%;
 `
-const Search = ({children}) => {
+const Search = ({children, height}) => {
+    const {isValid} = useContext(GlobalContext)
   return (
-      <Container>
+      <Container isValid={isValid} height={height}>
           <Wrapper>
            {children}
             <SubmitContainer>

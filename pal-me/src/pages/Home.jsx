@@ -84,7 +84,7 @@ const Home = () => {
                     </ImgContainer>
                 </Wrapper>
             </Container>
-            <Search>
+            <Search height='40vh'>
                 <FormGroup title="I'm looking for..." input={<RadioInput/>}/>
                 <FormGroup title="Enter Post code" input={<InputText/>}/>
                 <FormGroup title="sport(s)" input={<SelectInput options={Sports}/>}/>
