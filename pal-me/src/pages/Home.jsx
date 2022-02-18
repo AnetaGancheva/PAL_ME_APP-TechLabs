@@ -17,48 +17,49 @@ import Newsletter from '../components/NewsLetter'
 import {Sports} from '../data'
 
 const Container = styled.div`
-    width: 100%;
+    width: 100% !important;
     /* if user is Logged ,height will equal 100vh - (8vh)navbar height - (5vh)user navbar height*/
-    height: ${props => props.isLogged ?  "43vh" : "50vh"};
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2% 0;
+    height: ${props => props.isLogged ?  "43vh" : "50vh"} !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 2% 0 !important;
 `
 
 const Wrapper = styled.div`
-    width:70%;
-    height: 50%;
+    width:70% !important;
+    height: 50% !important;
     /* padding: 3% 5%; */
-    display: flex;
+    display: flex !important;
 `
 const InfoContainer = styled.div`
-    flex:1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex:1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
 `
 const Title = styled.h1`
     text-transform: capitalize;
+    font-weight: 2em !important;
 `
 const Desc = styled.div`
-    margin-bottom: 10%;
-    font-size: 1.2rem;
+    margin-bottom: 10% !important;
+    font-size: 1.2rem !important;
 ` 
 const ButtonsContainer = styled.div`
-    display: flex;
-    justify-content: flex-start;
+    display: flex !important;
+    justify-content: flex-start !important;
 
 `
 const ImgContainer = styled.div`
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex: 1 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
 `
 const Img = styled.img`
-    width: 60%;
-   height: 90%;
+    width: 60% !important;
+   height: 90% !important;
 `
 const Home = () => {
 

@@ -1,0 +1,87 @@
+.form-style{
+    padding: 20px !important;
+    border-radius: 4px !important;
+    background-color: white !important;
+    border: 1px solid lightgray !important;
+    cursor: pointer !important;     
+}
+
+.form-style:hover{
+    border: 1px outset teal !important;
+    background-color: rgb(228,242,227) !important;
+}
+
+.form-style:focus {
+    border: 1px outset teal !important;
+    background-color: white !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+ 
+.input-style:focus {
+    border: 1px outset teal !important;
+    background-color: white !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.input-style:active {
+    border: 1px outset teal !important;
+    background-color: white !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.input-style:hover {
+    border: 1px outset teal !important;
+    background-color: rgb(228,242,227) !important;
+}
+
+.newsletter-style:focus{
+    border: 1px outset teal !important;
+    background-color: white !important;
+    box-shadow: none !important;
+    outline: none !important;
+    border-radius: 4px !important;
+}
+
+.newsletter-style:active{
+    border: 1px outset teal !important;
+    background-color: white !important;
+    box-shadow: none !important;
+    outline: none !important;
+    border-radius: 4px !important;
+}
+
+.newsletter-style:hover{
+    border: 1px outset teal !important;
+    background-color: rgb(228,242,227) !important;
+    border-radius: 4px !important;
+}
+
+.navbar-link{
+    display: inline-block;
+}
+
+.navbar-link:hover{
+    color: #fff !important;
+    text-shadow:
+            0 0 3px #fff,
+            0 0 6px #fff,
+            0 0 19px #fff,
+            0 0 38px teal,
+            0 0 50px teal,
+            0 0 75px teal,
+            0 0 100px teal,
+            0 0 115px teal !important;
+}
+
+.circle-icon-link:hover{
+    box-shadow: 0 0 3px #fff,0 0 6px #fff, 0 0 19px teal;
+    border-radius: 50%;
+}
+
+.arrow-icon-link:hover{
+    box-shadow: 0 0 3px teal,0 0 6px rgb(0, 199, 199), 0 0 19px teal;
+    border-radius: 0% 0% 30% 30% !important;
+}

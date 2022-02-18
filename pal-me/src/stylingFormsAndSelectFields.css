@@ -1,0 +1,387 @@
+.mail-box {
+  border-collapse: collapse !important;
+  border-spacing: 0 !important;
+  display: table !important;
+  table-layout: fixed !important;
+  width: 100% !important;
+}
+.mail-box aside {
+  display: table-cell !important;
+  float: none !important;
+  height: 100% !important;
+  padding: 0 !important;
+  vertical-align: top !important;
+}
+.mail-box .sm-side {
+  background: none repeat scroll 0 0 #e5e8ef !important;
+  border-radius: 4px 0 0 4px !important;
+  width: 25% !important;
+}
+.mail-box .lg-side {
+  background: none repeat scroll 0 0 #fff !important;
+  border-radius: 0 4px 4px 0 !important;
+  width: 75% !important;
+}
+.mail-box .sm-side .user-head {
+  background: none repeat scroll 0 0 #00a8b3 !important;
+  border-radius: 4px 0 0 !important;
+  color: #fff !important;
+  min-height: 80px !important;
+  padding: 10px !important;
+}
+.user-head .inbox-avatar {
+  float: left !important;
+  width: 65px !important;
+}
+.user-head .inbox-avatar img {
+  border-radius: 4px !important;
+}
+.user-head .user-name {
+  display: inline-block !important;
+  margin: 0 0 0 10px !important;
+}
+.user-head .user-name h5 {
+  font-size: 14px !important;
+  font-weight: 300 !important;
+  margin-bottom: 0 !important;
+  margin-top: 15px !important;
+}
+.user-head .user-name h5 a {
+  color: #fff !important;
+}
+.user-head .user-name span a {
+  color: #87e2e7 !important;
+  font-size: 12px !important;
+}
+a.mail-dropdown {
+  background: none repeat scroll 0 0 #80d3d9 !important;
+  border-radius: 2px !important;
+  color: #01a7b3 !important;
+  font-size: 10px !important;
+  margin-top: 20px !important;
+  padding: 3px 5px !important;
+}
+.inbox-body {
+  padding: 20px !important;
+}
+.btn-compose {
+  background: none repeat scroll 0 0 #ff6c60 !important;
+  color: #fff !important;
+  padding: 12px 0 !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+.btn-compose:hover {
+  background: none repeat scroll 0 0 #f5675c !important;
+  color: #fff !important;
+}
+ul.inbox-nav {
+  display: inline-block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+.inbox-divider {
+  border-bottom: 1px solid #d5d8df !important;
+}
+ul.inbox-nav li {
+  display: inline-block !important;
+  line-height: 45px !important;
+  width: 100% !important;
+}
+ul.inbox-nav li a {
+  color: #6a6a6a !important;
+  display: inline-block !important;
+  line-height: 45px !important;
+  padding: 0 20px !important;
+  width: 100% !important;
+}
+ul.inbox-nav li a:hover, ul.inbox-nav li.active a, ul.inbox-nav li a:focus {
+  background: none repeat scroll 0 0 #d5d7de !important;
+  color: #6a6a6a !important;
+}
+ul.inbox-nav li a i {
+  color: #6a6a6a !important;
+  font-size: 16px !important;
+  padding-right: 10px !important;
+}
+ul.inbox-nav li a span.label {
+  margin-top: 0px !important;
+}
+ul.labels-info li h4 {
+  color: #5c5c5e !important;
+  font-size: 13px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  padding-top: 5px !important;
+  text-transform: uppercase !important;
+}
+ul.labels-info li {
+  margin: 0 !important;
+}
+ul.labels-info li a {
+  border-radius: 0 !important;
+  color: #6a6a6a !important;
+}
+ul.labels-info li a:hover, ul.labels-info li a:focus {
+  background: none repeat scroll 0 0 #d5d7de !important;
+  color: #6a6a6a !important;
+}
+ul.labels-info li a i {
+  padding-right: 10px !important;
+}
+.nav.nav-pills.nav-stacked.labels-info p {
+  color: #9d9f9e !important;
+  font-size: 11px !important;
+  margin-bottom: 0 !important;
+  padding: 0 22px !important;
+}
+.inbox-head {
+  background: none repeat scroll 0 0 #41cac0 !important;
+  border-radius: 0 4px 0 0 !important;
+  color: #fff !important;
+  min-height: 80px !important;
+  padding: 20px !important;
+}
+.inbox-head h3 {
+  display: inline-block !important;
+  font-weight: 300 !important;
+  margin: 0 !important;
+  padding-top: 6px !important;
+}
+.inbox-head .sr-input {
+  border: medium none !important;
+  border-radius: 4px 0 0 4px !important;
+  box-shadow: none !important;
+  color: #8a8a8a !important;
+  float: left !important;
+  height: 40px !important;
+  padding: 0 10px !important;
+}
+.inbox-head .sr-btn {
+  background: none repeat scroll 0 0 #00a6b2 !important;
+  border: medium none !important;
+  border-radius: 0 4px 4px 0 !important;
+  color: #fff !important;
+  height: 40px !important;
+  padding: 0 20px !important;
+}
+.table-inbox {
+  border: 1px solid #d3d3d3 !important;
+  margin-bottom: 0 !important;
+}
+.table-inbox tr td {
+  padding: 12px !important;
+}
+.table-inbox tr td:hover {
+  cursor: pointer !important;
+}
+.table-inbox tr td .fa-star.inbox-started, .table-inbox tr td .fa-star:hover {
+  color: #f78a09;
+}
+.table-inbox tr td .fa-star {
+  color: #d5d5d5 !important;
+}
+.table-inbox tr.unread td {
+  background: none repeat scroll 0 0 #f7f7f7 !important;
+  font-weight: 600 !important;
+}
+ul.inbox-pagination {
+  float: right !important;
+}
+ul.inbox-pagination li {
+  float: left !important;
+}
+.mail-option {
+  display: inline-block !important;
+  margin-bottom: 10px !important;
+  width: 100% !important;
+}
+.mail-option .chk-all, .mail-option .btn-group {
+  margin-right: 5px !important;
+}
+.mail-option .chk-all, .mail-option .btn-group a.btn {
+  background: none repeat scroll 0 0 #fcfcfc !important;
+  border: 1px solid #e7e7e7 !important;
+  border-radius: 3px !important;
+  color: #afafaf !important;
+  display: inline-block !important; 
+  padding: 5px 10px !important;
+}
+.inbox-pagination a.np-btn {
+  background: none repeat scroll 0 0 #fcfcfc !important;
+  border: 1px solid #e7e7e7 !important;
+  border-radius: 3px !important;
+  color: #afafaf !important;
+  display: inline-block !important;
+  padding: 5px 15px !important;
+}
+.mail-option .chk-all input[type="checkbox"] {
+  margin-top: 0 !important;
+}
+.mail-option .btn-group a.all {
+  border: medium none !important;
+  padding: 0 !important;
+}
+.inbox-pagination a.np-btn {
+  margin-left: 5px !important;
+}
+.inbox-pagination li span {
+  display: inline-block !important;
+  margin-right: 5px !important;
+  margin-top: 7px !important;
+}
+.fileinput-button {
+  background: none repeat scroll 0 0 #eeeeee !important;
+  border: 1px solid #e6e6e6 !important;
+}
+.inbox-body .modal .modal-body input, .inbox-body .modal .modal-body textarea {
+  border: 1px solid #e6e6e6 !important;
+  box-shadow: none !important;
+}
+.btn-send, .btn-send:hover {
+  background: none repeat scroll 0 0 #00a8b3;
+  color: #fff !important;
+}
+.btn-send:hover {
+  background: none repeat scroll 0 0 #009da7 !important;
+}
+.modal-header h4.modal-title {
+  font-family: "Open Sans",sans-serif !important;
+  font-weight: 300 !important;
+}
+.modal-body label {
+  font-family: "Open Sans",sans-serif !important;
+  font-weight: 400 !important;
+}
+.heading-inbox h4 {
+  border-bottom: 1px solid #ddd !important;
+  color: #444 !important;
+  font-size: 18px !important;
+  margin-top: 20px !important;
+  padding-bottom: 10px !important;
+}
+.sender-info {
+  margin-bottom: 20px !important;
+}
+.sender-info img {
+  height: 30px !important;
+  width: 30px !important;
+}
+.sender-dropdown {
+  background: none repeat scroll 0 0 #eaeaea !important;
+  color: #777 !important;
+  font-size: 10px !important;
+  padding: 0 3px !important;
+}
+.view-mail a {
+  color: #ff6c60 !important;
+}
+.attachment-mail {
+  margin-top: 30px !important;
+}
+.attachment-mail ul {
+  display: inline-block !important;
+  margin-bottom: 30px !important;
+  width: 100% !important;
+}
+.attachment-mail ul li {
+  float: left !important;
+  margin-bottom: 10px !important;
+  margin-right: 10px !important;
+  width: 150px !important;
+}
+.attachment-mail ul li img {
+  width: 100% !important;
+}
+.attachment-mail ul li span {
+  float: right !important;
+}
+.attachment-mail .file-name {
+  float: left !important;
+}
+.attachment-mail .links {
+  display: inline-block !important;
+  width: 100% !important;
+}
+
+.fileinput-button {
+  float: left !important;
+  margin-right: 4px !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+.fileinput-button input {
+  cursor: pointer !important;
+  direction: ltr !important;
+  font-size: 23px !important;
+  margin: 0 !important;
+  opacity: 0 !important;
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+  transform: translate(-300px, 0px) scale(4) !important;
+}
+.fileupload-buttonbar .btn, .fileupload-buttonbar .toggle {
+  margin-bottom: 5px !important;
+}
+.files .progress {
+  width: 200px !important;
+}
+.fileupload-processing .fileupload-loading {
+  display: block !important;
+}
+* html .fileinput-button {
+  line-height: 24px !important;
+  margin: 1px -3px 0 0 !important;
+}
+* + html .fileinput-button {
+  margin: 1px 0 0 !important;
+  padding: 2px 15px !important;
+}
+@media (max-width: 767px) {
+.files .btn span {
+  display: none !important;
+}
+.files .preview * {
+  width: 40px !important;
+}
+.files .name * {
+  display: inline-block !important;
+  width: 80px !important;
+  word-wrap: break-word !important;
+}
+.files .progress {
+  width: 20px !important;
+}
+.files .delete {
+  width: 60px !important;
+}
+}
+ul {
+  list-style-type: none !important;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+ul, ol {
+  padding-left: 2rem !important;
+}
+
+ul, ol, dl {
+  margin-bottom: 1rem !important;
+}
+
+.labels-info{
+  display: flex !important;
+  flex-direction: column !important;
+  align-content: space-between !important;
+}
+
+.btn-group {
+  margin-left: 10% !important;
+}
