@@ -60,22 +60,28 @@ export const GlobalProvider = ({children}) => {
 
     const handleSubmit = () => {
         const regex = /^[1-9][0-9]{3} ?(?!sa|sd|ss)[a-zA-Z]{2}$/
-        const fetchURL = process.env.Fetch_Url + postcodeInput + process.env.Key_Url
+        var LatLng = "Netherlands"
         if (postcodeInput.match(regex)){
-            setIsValid(true)
-            setError('')
-            fetch(fetchURL)
-            .then(
-                (results, status) => {
-                    if (status === "OK") {
-                        const latit = results[0]["geometry"]["location"]["lat"];
-                        const long = results[0]["geometry"]["location"]["lng"];
-                        console.log(long, latit);
-                        setLat(latit);
-                        setLon(long);
-                }},
+            fetch(process.env.REACT_APP_FETCH_URL_PART_ONE + postcodeInput + process.env.REACT_APP_FETCH_URL_PART_TWO)
+            .then(data => data.json())
+            .then((data) => {
+                        LatLng = [data.results[0].geometry.location.lat, data.results[0].geometry.location.lng]
+                        return LatLng;
+                },
                 (error) => {
                   console.error(error);
+                })
+                .then((LatLng) => {
+                    if(LatLng !== undefined)
+                    {
+                        console.log(LatLng);
+                        setLat(LatLng[0]);
+                        setLon(LatLng[1]);
+                        setIsValid(true)
+                        setError('')
+                    } else {
+                        console.error("LatLng is " + LatLng);
+                    }
                 });
         } else {
             setError("Please Enter A Valid Postcode ")

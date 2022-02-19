@@ -9,7 +9,8 @@ import FormGroup from '../components/FormGroup';
 import SelectInput from '../components/SelectInput';
 import {Sports} from '../data'
 //import map from '../images/map.png'
-import {Navigate} from 'react-router'
+//import {Navigate} from 'react-router'
+import Map from './Map'
 
 /*const Image = styled.img`
   width: 100%;;
@@ -29,7 +30,7 @@ const FindPlayers = () => {
     <FormGroup title="age" input={<SelectInput options={[{value:"12-18"},{value:"Above 18"},{value:"18-25"},{value:"25-45"},{value:"Above 50"}]}/>}/>
     <FormGroup title="level" input={<SelectInput options={[{value:"Beginner"},{value:"Intermediate"},{value:"Advanced"}]}/>}/>
     </Search>
-    { isValid ?  <Navigate to="/map" /> : ''}
+    { isValid ?  <Map /> : ''}
     <Footer/>
   </>;
 };

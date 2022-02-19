@@ -11,7 +11,6 @@ import FindClubs from './pages/FindClubs';
 import Messages from './pages/Messages';
 import Profile1 from './pages/Profile1';
 import Newsfeed from './pages/Newsfeed'
-import Map from './pages/Map';
 
 function App() {
   return (
@@ -28,7 +27,6 @@ function App() {
             <Route path="/messages" element={<Messages/>}/>
             <Route path="/profile" element={<Profile1/>}/>
             <Route path="/newsfeed" element={<Newsfeed/>}/>
-            <Route path="/map" element={<Map />} />
           </Routes>
         </Router>
     </GlobalProvider>
