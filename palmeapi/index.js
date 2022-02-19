@@ -15,6 +15,12 @@ mongoose
 app.use(express.json())
 // app.use("/api/users", userRoute)
 app.use("/api", authRoute)
-app.listen(process.env.PORT || 5001, () => {
+app.use("/", authRoute)
+app.post("/post", (req, res) => {
+    console.log("Connected to React");
+    res.redirect("/");
+  });
+
+app.listen(process.env.PORT || 5000, () => {
     console.log("Backend server is running!")
 })

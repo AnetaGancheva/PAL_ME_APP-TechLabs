@@ -1,21 +1,28 @@
 const router = require("express").Router()
 const User = require('../models/User')
 const CryptoJs = require('crypto-js')
-// const jwt = require('jsonwebtoken')
+
 
 // REGISTER
 router.post("/register", async (req,res) => {
 
     const username = req.body.username
+    const firstname = req.body.firstname
+    const lastname = req.body.lastname
     const email = req.body.email
     const password = req.body.password
-    // const confirmedPassword = req.body.confirmedPassword
-    if ( username === "" || password === "" || email === ""){
+    const confirmedPassword = req.body.confirmedPassword
+
+    if ( username === "" || password === "" || email === "" || confirmedPassword === ""){
         res.status(500).json("Please enter a username ,email and password")
+    } else if (password === confirmedPassword) {
+        res.status(500).json("Please make sure your passwords match")
     } else {
          const newUser = new User({
-            username: req.body.username,
-            email: req.body.email,
+            firstname,
+            lastname, 
+            username,
+            email,
             password:  CryptoJs.AES.encrypt(req.body.password, process.env.PASS_SEC).toString(), 
         })
 
@@ -45,11 +52,6 @@ router.post("/login", async (req,res) => {
 
         originalPassword !== req.body.password && res.status(401).json("Wrong credentials!")
 
-        // const accessToken = jwt.sign({
-        //     id: user._id,
-        //     isAdmin: user.idAdmin,
-        // }, process.env.JWT_SEC, 
-        //    {expiresIn:"3d"})
 
         const {password, ...others} = user._doc
 
@@ -60,4 +62,25 @@ router.post("/login", async (req,res) => {
 
 })
 
+//Get User
+router.get('/find/:id',async (req,res) => {
+    try {
+        const user = await User.findById(req.params.id)
+        const {password, ...others} = user._doc
+        res.status(200).json(others)
+    } catch (error){
+        res.status(500).json(err)
+    }   
+})
+
+// GET ALL USERS 
+router.get('/',async (req,res) => {
+    // try {
+    //     const users = await User.find()
+    //     res.status(200).json(users)
+    // } catch (error){
+    //     res.status(500).json(err)
+    // }   
+    res.send("Hello World!");
+})
 module.exports = router
