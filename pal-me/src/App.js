@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, /*Link*/ } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import './App.css';
 import { GlobalProvider } from './Context';
@@ -11,6 +11,7 @@ import FindClubs from './pages/FindClubs';
 import Messages from './pages/Messages';
 import Profile1 from './pages/Profile1';
 import Newsfeed from './pages/Newsfeed'
+
 
 function App() {
   return (

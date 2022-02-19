@@ -70,9 +70,9 @@ const Slider = () => {
       <Container> 
       <Arrow direction="left"  onClick={() => handleClick("left")}><MdKeyboardArrowLeft/></Arrow>
       <Wrapper slideIndex={slideIndex}>
-            {Reviews.map(item => (
+            {Reviews.map((item,index) => (
                 <Slide>
-                    <Review text={item.text} author={item.auhor}/>
+                    <Review text={item.text} author={item.auhor} key={index}/>
                 </Slide>
             ))}
           
