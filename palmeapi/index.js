@@ -13,12 +13,13 @@ mongoose
 .catch((err) => console.log(err))
 
 app.use(express.json())
-// app.use("/api/users", userRoute)
-app.use("/api", authRoute)
-app.use("/", authRoute)
-app.post("/post", (req, res) => {
-    console.log("Connected to React");
-    res.redirect("/");
+// // app.use("/api/users", userRoute)
+// app.use("/api", authRoute)
+// app.use("/", authRoute)
+app.get("/users", (req, res) => {
+    res.json({
+      usersList: ["user 1", "user 2"]
+    })
   });
 
 app.listen(process.env.PORT || 5000, () => {
