@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Card from '../profileComponents/Card'
-import TextInput from '../profileComponents/TextInput';
+//import TextInput from '../profileComponents/TextInput';
 import PasswordInput from '../profileComponents/PasswordInput';
 import SelectInput from '../profileComponents/SelectInput'
 import SubmitButton from '../profileComponents/SubmitButton';

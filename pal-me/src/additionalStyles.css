@@ -85,3 +85,9 @@
     box-shadow: 0 0 3px teal,0 0 6px rgb(0, 199, 199), 0 0 19px teal;
     border-radius: 0% 0% 30% 30% !important;
 }
+
+.pin-text:hover{
+    background-color: teal;
+    color: white;
+    border-color: lightgray;
+}

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { GlobalContext } from '../Context'
-import {useContext} from 'react';
+/*import { GlobalContext } from '../Context'
+import {useContext} from 'react';*/
 
 const Form = styled.form`
     margin-right: 3% !important;

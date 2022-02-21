@@ -49,7 +49,8 @@ const Button = styled.button`
 const StyledLink = styled(Link)`
     color: black;
     margin: 2% 0;
-    `
+`
+
 const Login = () => {
     return (
         <Container>
