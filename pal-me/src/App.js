@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {useState, useEffect} from 'react'
 import Home from './pages/Home';
 import './App.css';
 import { GlobalProvider } from './Context';
@@ -12,9 +13,25 @@ import Messages from './pages/Messages';
 import Profile1 from './pages/Profile1';
 import Newsfeed from './pages/Newsfeed'
 
+// function Users() {
+//   const [users, setUsers] = useState([])
+//    useEffect(() => {
+//       fetch("/users").then(res => {
+//         if(res.ok){
+//           return res.json()
+//         }
+//       }).then(jsonRes => setUsers(jsonRes.usersList))
 
+//       return (<div>
+//         {users.map(user => <li>{user}</li>)}
+//       </div>)
+//    })
+// }
 function App() {
+
+  
   return (
+    // <Users />
     <GlobalProvider>
           <Router>
           <Routes>
