@@ -15,10 +15,28 @@ import Slider from '../components/Slider'
 import Footer from '../components/Footer'
 import Newsletter from '../components/NewsLetter'
 import {Sports} from '../data'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'wowjs/css/libs/animate.css'
+import { WOW } from 'wowjs'
+
+var Wow = new WOW(
+    {
+      boxClass:     'wow',      // animated element css class (default is wow)
+      animateClass: 'animated', // animation css class (default is animated)
+      offset:       0,          // distance to the element when triggering the animation (default is 0)
+      mobile:       true,       // trigger animations on mobile devices (default is true)
+      live:         true,       // act on asynchronously loaded content (default is true)
+      callback:     function(box) {
+        // the callback is fired every time an animation is started
+        // the argument that is passed in is the DOM node being animated
+      },
+      scrollContainer: null // optional scroll container selector, otherwise use window
+    }
+  );
+Wow.init();
 
 const Container = styled.div`
     width: 100% !important;
-    /* if user is Logged ,height will equal 100vh - (8vh)navbar height - (5vh)user navbar height*/
     height: ${props => props.isLogged ?  "43vh" : "50vh"} !important;
     display: flex !important;
     justify-content: center !important;
@@ -29,7 +47,6 @@ const Container = styled.div`
 const Wrapper = styled.div`
     width:70% !important;
     height: 50% !important;
-    /* padding: 3% 5%; */
     display: flex !important;
 `
 const InfoContainer = styled.div`
@@ -67,30 +84,32 @@ const Home = () => {
     return (
         <>
             <Navbar/>
-            <Container isLogged={isLogged}>
-                <Wrapper>
-                    <InfoContainer>
-                        <Title>Looking for someone to do activity with?</Title>
-                        <Desc>
-                            Look no further - palME is the right place for you! Do not hesitate to give it a try!
-                        </Desc>
-                        <ButtonsContainer>
-                            <StyledButton appName="App Store" appSymbol={<FaApple/>}/>
-                            <StyledButton appName="Google Play" appSymbol={<FaGooglePlay/>}/>
-                        </ButtonsContainer>
-                    </InfoContainer>
-                    <ImgContainer>
-                        <Img src={img} /> 
-                    </ImgContainer>
-                </Wrapper>
-            </Container>
-            <Search height='40vh'>
-                <FormGroup title="I'm looking for..." input={<RadioInput/>}/>
-                <FormGroup title="Enter Post code" input={<InputText/>}/>
-                <FormGroup title="sport(s)" input={<SelectInput options={Sports}/>}/>
-            </Search>
-            <Slider/>
-            <Newsletter />
+            <div className="wow fadeInUp">
+                <Container isLogged={isLogged} >
+                    <Wrapper>
+                        <InfoContainer>
+                            <Title>Looking for someone to do activity with?</Title>
+                            <Desc>
+                                Look no further - palME is the right place for you! Do not hesitate to give it a try!
+                            </Desc>
+                            <ButtonsContainer>
+                                <StyledButton appName="App Store" appSymbol={<FaApple/>}/>
+                                <StyledButton appName="Google Play" appSymbol={<FaGooglePlay/>}/>
+                            </ButtonsContainer>
+                        </InfoContainer>
+                        <ImgContainer>
+                            <Img src={img} /> 
+                        </ImgContainer>
+                    </Wrapper>
+                </Container>
+                <Search height='40vh'>
+                    <FormGroup title="I'm looking for..." input={<RadioInput/>}/>
+                    <FormGroup title="Enter Post code" input={<InputText/>}/>
+                    <FormGroup title="sport(s)" input={<SelectInput options={Sports}/>}/>
+                </Search>
+                <Slider/>
+                <Newsletter />
+            </div>
             <Footer/>
         </>
     )

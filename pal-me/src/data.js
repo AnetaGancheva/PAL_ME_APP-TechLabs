@@ -1,13 +1,16 @@
-import img1 from './images/find-players.jpg'
-import img2 from './images/find-local-events-small.jpg'
-import img3 from './images/find-local-players.jpg'
-import img4 from './images/available-players-small.jpg'
-import img5 from './images/friends-list.jpg'
-import img6 from './images/sports-network-small.jpg'
-import img7 from './images/squadboss-big.jpg'
-import img8 from './images/squadboss-small.jpg'
-import img9 from './images/never-be-short.jpg'
-import img10 from './images/find-local-players-small.jpg'
+import img1 from './images/players2_280px_1.jpg'
+import img2 from './images/players2_231px_1.jpg'
+import img3 from './images/players1_280px_1.jpg'
+import img4 from './images/players1_231px_1.jpg'
+import img5 from './images/players3_280px_1.jpg'
+import img6 from './images/players3_231px_1.jpg'
+import img7 from './images/organizers3_280px_1.jpg'
+import img8 from './images/organizers3_231px_1.jpg'
+import img9 from './images/organizers2_280px_1.jpg'
+import img10 from './images/organizers2_231px_1.jpg' 
+import img11 from './images/organizers1_280px_1.jpg'
+import img12 from './images/organizers1_231px_1.jpg'
+
 
 export const stories = [
     {
@@ -56,7 +59,7 @@ export const Reviews =  [
 export const ForPlayers = [
     {
         id: 1,
-        text: "Set up your profile, tell us what sports you like and then wait for organisers to invite youto a game. Or, you can search all the games in your local area and ask to join!",
+        text: "Set up your profile, tell us what sports you like and then wait for organisers to invite you to a game. Or, you can search all the games in your local area and ask to join!",
         title: "CREATE OR FIND LOCAL EVENTS",
         image: img1,
         positionedImg: img2,
@@ -101,8 +104,8 @@ export const ForOrganizers = [
         id: 3,
         text: "Are you a sports organization or a club with the need to advertise open places? Now you can do not only this but also all of the admin work in under than five minutes! No joke. It takes two minutes to set up your account and advertise your very first game. Once it is set up, you can send out some invites with just a few taps on your phone and keep track of your numbers every week!",
         title: "ADMIN DONE IN UNDER FIVE MINUTES",
-        image: img7,
-        positionedImg: img8,
+        image: img11,
+        positionedImg: img12,
         direction: "left"
     }
 ]
