@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-//import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import backgroundImg from '../images/register-background.jpg'
 
 const Container = styled.div`
@@ -52,6 +52,11 @@ const Button = styled.button`
 
 `
 
+const StyledLink = styled(Link)`
+    color: black;
+    margin: 2% 0;
+`
+
 const Register = () => {
     return (
         <Container>
@@ -69,6 +74,7 @@ const Register = () => {
                     data in accordance with the <b>PRIVACY POLICY</b>
                     </Agreement>
                     <Button>Create</Button>
+                    <StyledLink to="/">BACK TO HOME</StyledLink>
                 </Form>
             </Wrapper>
         </Container>
