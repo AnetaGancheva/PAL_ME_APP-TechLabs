@@ -1,11 +1,13 @@
+import {useContext} from 'react'
+import { UserContext } from '../UserContext'
 import styled from 'styled-components';
 import Card from '../profileComponents/Card'
-//import TextInput from '../profileComponents/TextInput';
 import PasswordInput from '../profileComponents/PasswordInput';
 import SelectInput from '../profileComponents/SelectInput'
 import SubmitButton from '../profileComponents/SubmitButton';
 import {Sports} from '../data'
 import Navbar from '../components/Navbar';
+
 
 const Container = styled.div`
     background-color: #ebe6e5;
@@ -27,6 +29,7 @@ const Profilepic = styled.div`
 `
 
 const Profile1 = () => {
+  const { user } = useContext(UserContext);
   return (
       <>
         <Navbar/>
