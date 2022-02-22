@@ -4,7 +4,7 @@ import palMeLogo from '../images/palMeLogo_103x50BW.png'
 
 const Container = styled.div`
     display: flex;
-    padding: 3% 5% ;
+    padding: 1%  5% ;
     background-color: rgb(0,64,64);
     color: white;
 `

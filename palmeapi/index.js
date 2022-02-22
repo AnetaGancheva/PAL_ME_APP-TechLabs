@@ -1,5 +1,6 @@
 const express = require("express")
 const app = express()
+var cors = require('cors')
 const mongoose = require("mongoose")
 const dotenv = require("dotenv")
 const userRoute = require("./routes/users")
@@ -12,14 +13,14 @@ mongoose
 .then(() => console.log("Db connection is successful"))
 .catch((err) => console.log(err))
 
+app.use(cors())
 app.use(express.json())
 // app.use("/api/users", userRoute)
 app.use("/api", authRoute)
 app.use("/", authRoute)
-app.post("/post", (req, res) => {
-    console.log("Connected to React");
-    res.redirect("/");
-  });
+app.get("/users", (req, res) => {
+    res.json({msg :"hello"})
+});
 
 app.listen(process.env.PORT || 5000, () => {
     console.log("Backend server is running!")

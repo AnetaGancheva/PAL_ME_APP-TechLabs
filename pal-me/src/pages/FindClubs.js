@@ -20,15 +20,15 @@ import Map from './Map'
 */
 
 const FindClubs = () => {
-  const {isValid} = useContext(GlobalContext)
+  const {validPostcode} = useContext(GlobalContext)
   return <>
       <Navbar/>
-    <Search  height='60vh'>
+    <Search  height='70vh'>
         <FormGroup title="Enter Post code" input={<InputText/>}/>
         <FormGroup title="sport(s)" input={<SelectInput options={Sports}/>}/>
         <FormGroup title="indoor/outdoor" input={<SelectInput options={[{value:"indoor"}, {value:"outdoor"}]}/>}/>
     </Search>
-    { isValid ?  <Map /> : ''}
+    { validPostcode ?  <Map /> : ''}
     <Footer/>
   </>;
 };

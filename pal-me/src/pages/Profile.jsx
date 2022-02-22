@@ -1,12 +1,21 @@
+import {useContext} from 'react'
+import { UserContext } from '../UserContext'
+import styled from 'styled-components';
+import Card from '../profileComponents/Card'
+import PasswordInput from '../profileComponents/PasswordInput';
+import SelectInput from '../profileComponents/SelectInput'
+import SubmitButton from '../profileComponents/SubmitButton';
+import {Sports} from '../data'
 import Navbar from '../components/Navbar';
-import styled from "styled-components";
-import FormGroup from '../components/FormGroup';
-import ProfileEditPhoto from '../images/racetrack.png';
-import CoverPhoto from '../images/ball_30op.png'
-import SelectInput from '../components/SelectInput';
-import {Sports} from '../data';
-import InputText from '../components/InputText';
 
+
+const Container = styled.div`
+    background-color: #ebe6e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+`
 const Profilepic = styled.div`
   width: 188px;
   height: 188px;
@@ -16,134 +25,37 @@ const Profilepic = styled.div`
   background-image: url("https://i.pravatar.cc/300");
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  border-radius: 4px;
 `
 
-const Main = styled.div`
-  position: relative;
-  background-image: url(${ProfileEditPhoto});
-  margin: auto;
-`
+const Profile1 = () => {
+  const { user } = useContext(UserContext);
+  return (
+      <>
+        <Navbar/>
+        <Container>
+         <Card title="Profile Picture">
+             <Profilepic/>
+            <SubmitButton text="Edit Photo"/>
+        </Card>
+        <Card title="About">
+        <SelectInput options={[{value:"12-18"},{value:"Above 18"},{value:"18-25"},{value:"25-45"},{value:"Above 50"}]} label="age"/>
+            <SelectInput options={[{value: "female"}, {value : "male"}]} label="Gender"/>
+            <SelectInput options={[{value:"Beginner"},{value:"Intermediate"},{value:"Advanced"}]} label="Level"/>
+            <SelectInput options={Sports} label="favorite sport"/>
+            <SubmitButton text="save"/>
+        </Card>
+        <Card title="Password">
+            <PasswordInput label="Please enter your old password"/>
+            <PasswordInput  label="enter your new password"/>
+            <PasswordInput  label="confirm your new password"/>
+            <SubmitButton text="save"/>
+        </Card>
+    </Container>
+      </>
+      
 
-const Hr = styled.hr`
-  border: 1px solid #333;
-`
+  )
+};
 
-const FlexContainer = styled.div`
-  position: relative;
-  display: flex;
-`
-
-const CardContainer = styled.div`
-  display: grid;
-  grid-template-columns: 20% 80%;
-  height: 100%;
-  width: 100%;
-
-  @media (max-width: 1440px) {
-    grid-template-columns: 25% 75%;
-  }
-  @media (max-width: 1200px) {
-    grid-template-columns: 100%;
-  }
-  @media (max-width: 1024px) {
-    grid-template-columns: 100%;
-  }
-  @media (max-width: 768px) {
-    grid-template-columns: 100%;
-  }
-  @media (max-width: 480px) {
-    grid-template-columns: 100%;
-  }
-`
-
-const Card = styled.div`
-  background-size: cover;
-  background-position: center;
-  margin: 6px;
-  width: 100%;
-  border-radius: 1px;
-`
-
-const Button = styled.button`
-    background-color: teal;
-    border: none;
-    border-radius: 4px;
-    height: 55px;
-    padding: 0px 30px;
-    font-size: 1.2rem;
-    color: white;
-    font-weight: 400;
-    cursor: pointer;
-
-     &:active{
-      transform: translateY(5px);
-    }
-`
-const Form = styled.form`
-    display: flex;
-    flex-direction: column;
-`
-
-const Container = styled.div`
-    width: 100%;
-    height: 30vh;
-    background-image: url(${CoverPhoto});
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`
-const Title = styled.h1`
-    color: white;
-    text-align: left;
-    padding-top: 5px;
-    padding-bottom: 2px;
-    border-radius: 4px;
-`
-const Span = styled.span`
-    font-size: 3rem ;
-`
-
-const Profile =() => {
-    return (
-        <>
-        <Navbar />
-        <Main>
-            <Container>
-                <Span><Title>Edit profile</Title></Span> 
-            </Container>
-          <Hr />
-          <FlexContainer>
-            <CardContainer>
-              <Card>
-                <Profilepic />
-                <Button>Change profile picture</Button>
-              </Card>
-              <Card>
-              <Form>
-                    <Title>Change password:</Title>
-                    <FormGroup title="Please type in your old password" input={<InputText/>}/>
-                    <FormGroup title="Enter your new password" input={<InputText/>}/>
-                    <FormGroup title="Confirm new password" input={<InputText/>}/>
-                    <Button>Save</Button>
-              </Form>
-              </Card>
-              <Card>
-              </Card>
-              <Card>
-              <Form>
-              <FormGroup title="Favourite Sport" input={<SelectInput options={Sports}/>}/>
-              <FormGroup title="Gender" input={<SelectInput options={[{value: "female"}, {value : "male"}]}/>}/>
-              <FormGroup title="Age" input={<SelectInput options={[{value:"12-18"},{value:"Above 18"},{value:"18-25"},{value:"25-45"},{value:"Above 50"}]}/>}/>
-              <FormGroup title="Level" input={<SelectInput options={[{value:"Beginner"},{value:"Intermediate"},{value:"Advanced"}]}/>}/>
-              <Button>Save</Button>
-              </Form>
-              </Card>
-            </CardContainer>
-          </FlexContainer>
-        </Main>
-        </>
-      )
-}
-
-export default Profile
+export default Profile1;
