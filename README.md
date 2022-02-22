@@ -22,32 +22,32 @@ We do not intend to profit from this project and it has been created for educati
 
 ### Home page
 Here the user sees more information about the application and can choose to register/login from the right side of the Navigation bar.
-![Home Page One](/pal-me/images/Home_page_22feb.JPG)
-![Home Page Two](/pal-me/images/Home_page_1_22feb.JPG)
+![Home Page One](/pal-me/src/images/Home_page_22feb.JPG)
+![Home Page Two](/pal-me/src/images/Home_page_1_22feb.JPG)
 
 ### Find a player page
 By typing a valid Dutch postcode the user can choose to look for a player for their game/club.
-![Find A Player Page](/pal-me/images/Find_a_player_22Feb.JPG)
+![Find A Player Page](/pal-me/src/images/Find_a_player_22Feb.JPG)
 
 ### Find a club page
 By typing a valid Dutch postcode the user can choose to look for a game/club.
-![Find A Player Page](/pal-me/images/Find_a_club_22Feb.JPG)
+![Find A Player Page](/pal-me/src/images/Find_a_club_22Feb.JPG)
 
 ### Information for players and organizers
 Here more information about app functionality is shown.
-![For Players Page](/pal-me/images/For_players_22feb.JPG)
-![For Organizers Page](/pal-me/images/For_organizers_22feb.JPG)
+![For Players Page](/pal-me/src/images/For_players_22feb.JPG)
+![For Organizers Page](/pal-me/src/images/For_organizers_22feb.JPG)
 
 ### When logged in, the user has access to Messages, News and Profile pages, as well.
-![Profile Page](/pal-me/images/Profile.JPG)
-![Messages Page](/pal-me/images/Messages_22fbe.JPG)
-![News Page](/pal-me/images/News.JPG)
+![Profile Page](/pal-me/src/images/Profile.JPG)
+![Messages Page](/pal-me/src/images/Messages_22fbe.JPG)
+![News Page](/pal-me/src/images/News.JPG)
 
 ### Google Maps API shown when typing valid Dutch postcode
-![Map shown](/pal-me/images/Map_page_22feb.JPG)
+![Map shown](/pal-me/src/images/Map_page_22feb.JPG)
 
 ## Demo
-![Demo of Application](/pal-me/images/palMe-Demo.gif)
+![Demo of Application](/pal-me/src/images/palMe-Demo.gif)
 
 
 
