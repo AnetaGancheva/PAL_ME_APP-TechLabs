@@ -78,7 +78,7 @@ const PositonedImg = styled.img`
   }
 ` 
 const InfoContainer = ({item}) => {
-  return <Container>
+  return <Container className="wow fadeInUp"  data-wow-delay="0.2s" style={{visibility: 'visible', animationDelay: '0.2s', animationName: 'fadeIn'}}>
             <Wrapper direction={item.direction}>
                 {item.direction === "left" ? <><TextContainer>
                     <Title>{item.title}</Title>
@@ -86,17 +86,17 @@ const InfoContainer = ({item}) => {
                     <Desc>{item.text}</Desc>
                 </TextContainer>
                 <ImgContainer>
-                    <Img src={item.image}/>
-                    <PositonedImg src={item.positionedImg} direction={item.direction}/>
+                    <Img className="wow fadeInUp"  data-wow-delay="0.2s" style={{visibility: 'visible', animationDelay: '0.2s', animationName: 'fadeIn'}} src={item.image}/>
+                    <PositonedImg className="wow fadeInUp"  data-wow-delay="0.5s" style={{visibility: 'visible', animationDelay: '0.5s', animationName: 'fadeIn'}} src={item.positionedImg} direction={item.direction}/>
                 </ImgContainer> </> : <>
                 <ImgContainer>
-                    <Img src={item.image}/>
-                    <PositonedImg src={item.positionedImg} direction={item.direction}/>
+                    <Img className="wow fadeInUp"  data-wow-delay="0.2s" style={{visibility: 'visible', animationDelay: '0.2s', animationName: 'fadeIn'}} src={item.image}/>
+                    <PositonedImg className="wow fadeInUp"  data-wow-delay="0.5s" style={{visibility: 'visible', animationDelay: '0.5s', animationName: 'fadeIn'}} src={item.positionedImg} direction={item.direction}/>
                 </ImgContainer>
                 <TextContainer>
-                    <Title>{item.title}</Title>
+                    <Title className="wow fadeInUp"  data-wow-delay="0.2s" style={{visibility: 'visible', animationDelay: '0.2s', animationName: 'fadeIn'}}>{item.title}</Title>
                     <Hr/>
-                    <Desc>{item.text}</Desc>
+                    <Desc className="wow fadeInUp"  data-wow-delay="0.5s" style={{visibility: 'visible', animationDelay: '0.5s', animationName: 'fadeIn'}}>{item.text}</Desc>
                 </TextContainer>
                     </> }
             </Wrapper>
