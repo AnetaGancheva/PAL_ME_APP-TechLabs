@@ -61,13 +61,14 @@ const Img = styled.img`
 `
 
 
+
+
 const Home = () => {
 
     const {isLogged} = useContext(GlobalContext)
     return (
         <>
             <Navbar/>
-            <div className="wow fadeInUp">
                 <Container isLogged={isLogged} >
                     <Wrapper>
                         <InfoContainer>
@@ -92,7 +93,6 @@ const Home = () => {
                 </Search>
                 <Slider/>
                 <Newsletter />
-            </div>
             <Footer/>
         </>
     )
