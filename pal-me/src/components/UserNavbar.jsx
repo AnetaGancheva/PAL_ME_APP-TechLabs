@@ -1,6 +1,9 @@
+import {useContext} from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import '../additionalStyles.css'
+import { UserContext } from '../UserContext'
+
 
 
 const Container = styled.div`
@@ -17,6 +20,7 @@ const Container = styled.div`
 ` 
 const Left = styled.h2`
     flex:1;
+    text-transform: capitalize;
 `
 
 const Right = styled.div`
@@ -38,23 +42,14 @@ const HooverNavLink = styled.span`
     
 `
 
-/*const NavButton = styled.button`
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    color: white;
-    font-size: 1.2rem;
-    padding: 1% 0;
-` 
-*/
+const UserNavbar = ({loggedIn}) => {
 
-const UserNavbar = ({isLogged}) => {
+    const { user} = useContext(UserContext)
 
     return (
-       <Container isLogged={isLogged}>
-            <Left>
-                Welcome, Username
+       <Container isLogged={loggedIn}>
+            <Left >
+                Welcome, {user.firstname}
             </Left>
             <Right>
                 <NavLink to="/messages"><HooverNavLink className="navbar-link">Messages</HooverNavLink></NavLink>

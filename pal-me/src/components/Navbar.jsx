@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import {MdOutlineAccountCircle, MdArrowDropDown} from "react-icons/md"
 import UserNavbar from './UserNavbar'
+import { UserContext } from '../UserContext'
 import { GlobalContext } from '../Context'
 import palMeLogo from '../images/palMeLogo_103x50BW.png'
 import '../additionalStyles.css'
@@ -71,7 +72,7 @@ const NavButton = styled.button`
     }
 ` 
 const DropdownMenu = styled.div`
-    display: ${props => (props.showMenu && !props.isLogged) ? 'block' : 'none'};
+    display: ${props => (props.showMenu && !props.loggedIn) ? 'block' : 'none'};
     position: absolute;
     right: 15px;
     z-index: 1;
@@ -97,7 +98,7 @@ const Hr = styled.div`
     height: 0.1px;
 `
 const DropdownUserMenu = styled.div`
-    display: ${props => props.isLogged && props.showMenu? 'block' : 'none'};
+    display: ${props => props.loggedIn && props.showMenu? 'block' : 'none'};
     position: absolute;
     right: 15px;
     z-index: 1;
@@ -122,7 +123,9 @@ const HooverNavLink = styled.span`
 
 const Navbar = () => {
 
-    const {isLogged, showDropdownMenu, handleDropdownMenu, handleLogout} = useContext(GlobalContext)
+    const {showDropdownMenu, handleDropdownMenu} = useContext(GlobalContext)
+    //for the user when login
+    const { user, handleLogout} = useContext(UserContext);
   
     return (
        <>
@@ -139,23 +142,23 @@ const Navbar = () => {
                     </Center>
                     <Right>
                         <NavButton onClick={handleDropdownMenu}>
-                            <MdOutlineAccountCircle className="circle-icon-link" style={{display: isLogged ? 'inline' : 'none' }}/>
-                            <MdArrowDropDown className="arrow-icon-link" style={{display: isLogged ? 'none' : 'inline' }} />
+                            <MdOutlineAccountCircle className="circle-icon-link" style={{display: user.loggedIn ? 'inline' : 'none' }}/>
+                            <MdArrowDropDown className="arrow-icon-link" style={{display: user.loggedIn ? 'none' : 'inline' }} />
                         </NavButton>
-                        <DropdownMenu showMenu={showDropdownMenu} isLogged={isLogged}>
+                        <DropdownMenu showMenu={showDropdownMenu} loggedIn={user.loggedIn}>
                             <NavLink to="/login"><HooverNavLink className="navbar-link">Login</HooverNavLink></NavLink>
                             <Hr />
                             <NavLink to="/register"><HooverNavLink className="navbar-link">Create An Account</HooverNavLink></NavLink>
                         </DropdownMenu>
-                        <DropdownUserMenu showMenu={showDropdownMenu} isLogged={isLogged}>
+                        <DropdownUserMenu showMenu={showDropdownMenu} loggedIn={user.loggedIn}>
                             <NavLink to="/profile"><HooverNavLink className="navbar-link">Profile</HooverNavLink></NavLink>
                             <Hr />
-                            <NavLink to="/" onClick={handleLogout}><HooverNavLink className="navbar-link">Logout</HooverNavLink></NavLink>
+                            <NavLink to="/" ><HooverNavLink className="navbar-link" onClick={handleLogout}>Logout</HooverNavLink></NavLink>
                         </DropdownUserMenu>
 
                     </Right>          
             </Container>
-            {isLogged ? <UserNavbar isLogged={isLogged}/> : <UserNavbar />}
+            {user.loggedIn ? <UserNavbar loggedIn={user.loggedIn}/> : <UserNavbar />}
        </> 
         
     )
