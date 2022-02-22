@@ -24,7 +24,7 @@ const Map = () => {
                 <Pin lat={Number(lat)-0.0012} lng={Number(lon)+0.5} text={"Jane Doe\nJogging\nNew.."}/>
                 <Pin lat={Number(lat)+0.0070} lng={Number(lon)-0.2} text={"John Doe\nFootball\nLooking for.."}/>
                 <Pin lat={Number(lat)-0.0090} lng={Number(lon)+0.2} text={"Jane Doe\nTennis\nLooking for.."}/>
-                <Pin lat={Number(lat)+0.0100} lng={Number(lon)-0.8} text={"John Doe\nFootball\nPlease contact.."}/>
+                <Pin lat={Number(lat)+0.058} lng={Number(lon)-0.8} text={"John Doe\nFootball\nPlease contact.."}/>
                 <Pin lat={Number(lat)+0.0012} lng={Number(lon)+0.4} text={"Jane Doe\nBasketball\nLooking for.."}/>
             </GoogleMapReact>
         </Container>

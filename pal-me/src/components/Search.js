@@ -27,7 +27,7 @@ const SubmitContainer = styled.div`
 const Search = ({children, height}) => {
     const {validPostcode} = useContext(GlobalContext)
   return (
-      <Container validPostcode={validPostcode} height={height}>
+      <Container className="wow fadeIn" data-wow-delay="0.4s" style={{visibility: 'visible', animationDelay: '0.4s', animationName: 'fadeIn'}} validPostcode={validPostcode} height={height}>
           <Wrapper>
            {children}
             <SubmitContainer>

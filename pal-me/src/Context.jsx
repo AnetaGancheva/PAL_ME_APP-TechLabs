@@ -25,8 +25,13 @@ export const GlobalProvider = ({children}) => {
     // for google maps latitude+longtitude
     const [lat, setLat] = useState(48.8583701)
     const [lon, setLon] = useState(2.2922926)
+    //handle marker click
+    const[isMarkerClicked, setMarker] = useState(false)
 
     // actions 
+    const handleMarkerClicked = () => {
+        setMarker((prevState) => !prevState)
+    }
   
     // to show/hide 
     const handleDropdownMenu = () => {
@@ -88,11 +93,13 @@ export const GlobalProvider = ({children}) => {
         validPostcode,
         lat,
         lon,
+        isMarkerClicked,
         handlePostcodeInput,
         handleRadioChecked,
         handleDropdownMenu,
         setCurrentEMailId,
-        handleSubmit
+        handleSubmit,
+        handleMarkerClicked
     } }>
         {children}
     </GlobalContext.Provider>)

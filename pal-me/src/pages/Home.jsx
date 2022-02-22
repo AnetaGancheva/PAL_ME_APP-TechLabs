@@ -18,7 +18,6 @@ import {Sports} from '../data'
 
 const Container = styled.div`
     width: 100% !important;
-    /* if user is Logged ,height will equal 100vh - (8vh)navbar height - (5vh)user navbar height*/
     height: ${props => props.isLogged ?  "43vh" : "50vh"} !important;
     display: flex !important;
     justify-content: center !important;
@@ -29,7 +28,6 @@ const Container = styled.div`
 const Wrapper = styled.div`
     width:70% !important;
     height: 50% !important;
-    /* padding: 3% 5%; */
     display: flex !important;
 `
 const InfoContainer = styled.div`
@@ -61,36 +59,40 @@ const Img = styled.img`
     width: 60% !important;
    height: 90% !important;
 `
+
+
+
+
 const Home = () => {
 
     const {isLogged} = useContext(GlobalContext)
     return (
         <>
             <Navbar/>
-            <Container isLogged={isLogged}>
-                <Wrapper>
-                    <InfoContainer>
-                        <Title>Looking for someone to do activity with?</Title>
-                        <Desc>
-                            Look no further - palME is the right place for you! Do not hesitate to give it a try!
-                        </Desc>
-                        <ButtonsContainer>
-                            <StyledButton appName="App Store" appSymbol={<FaApple/>}/>
-                            <StyledButton appName="Google Play" appSymbol={<FaGooglePlay/>}/>
-                        </ButtonsContainer>
-                    </InfoContainer>
-                    <ImgContainer>
-                        <Img src={img} /> 
-                    </ImgContainer>
-                </Wrapper>
-            </Container>
-            <Search height='40vh'>
-                <FormGroup title="I'm looking for..." input={<RadioInput/>}/>
-                <FormGroup title="Enter Post code" input={<InputText/>}/>
-                <FormGroup title="sport(s)" input={<SelectInput options={Sports}/>}/>
-            </Search>
-            <Slider/>
-            <Newsletter />
+                <Container isLogged={isLogged} >
+                    <Wrapper>
+                        <InfoContainer>
+                            <Title>Looking for someone to do activity with?</Title>
+                            <Desc>
+                                Look no further - palME is the right place for you! Do not hesitate to give it a try!
+                            </Desc>
+                            <ButtonsContainer>
+                                <StyledButton appName="App Store" appSymbol={<FaApple/>}/>
+                                <StyledButton appName="Google Play" appSymbol={<FaGooglePlay/>}/>
+                            </ButtonsContainer>
+                        </InfoContainer>
+                        <ImgContainer>
+                            <Img src={img} /> 
+                        </ImgContainer>
+                    </Wrapper>
+                </Container>
+                <Search height='40vh'>
+                    <FormGroup title="I'm looking for..." input={<RadioInput/>}/>
+                    <FormGroup title="Enter Post code" input={<InputText/>}/>
+                    <FormGroup title="sport(s)" input={<SelectInput options={Sports}/>}/>
+                </Search>
+                <Slider/>
+                <Newsletter />
             <Footer/>
         </>
     )
