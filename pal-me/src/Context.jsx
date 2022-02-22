@@ -21,7 +21,7 @@ export const GlobalProvider = ({children}) => {
     const [postcodeInput, setPostcodeInput] = useState('')
     // for invalid inputs 
     const [error, setError]  = useState('')
-    const [isValid, setIsValid]  = useState(false)
+    const [validPostcode, setValidPostcode]  = useState(false)
     // for google maps latitude+longtitude
     const [lat, setLat] = useState(48.8583701)
     const [lon, setLon] = useState(2.2922926)
@@ -63,7 +63,7 @@ export const GlobalProvider = ({children}) => {
                         console.log(LatLng);
                         setLat(LatLng[0]);
                         setLon(LatLng[1]);
-                        setIsValid(true)
+                        setValidPostcode(true)
                         setError('')
                     } else {
                         console.error("LatLng is " + LatLng);
@@ -71,7 +71,7 @@ export const GlobalProvider = ({children}) => {
                 });
         } else {
             setError("Please Enter A Valid Postcode ")
-            setIsValid(false)
+            validPostcode(false)
         }
     }
 
@@ -85,7 +85,7 @@ export const GlobalProvider = ({children}) => {
         currentEmailId,
         postcodeInput,
         error,
-        isValid,
+        validPostcode,
         lat,
         lon,
         handlePostcodeInput,
