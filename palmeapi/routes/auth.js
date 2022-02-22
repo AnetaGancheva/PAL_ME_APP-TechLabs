@@ -13,9 +13,10 @@ router.post("/register", async (req,res) => {
     const password = req.body.password
     const confirmedPassword = req.body.confirmedPassword
 
+    
     if ( username === "" || password === "" || email === "" || confirmedPassword === ""){
         res.status(500).json("Please enter a username ,email and password")
-    } else if (password === confirmedPassword) {
+    } else if (password !== confirmedPassword) {
         res.status(500).json("Please make sure your passwords match")
     } else {
          const newUser = new User({
@@ -27,6 +28,7 @@ router.post("/register", async (req,res) => {
         })
 
         try {
+            
             await User.findOne({username}) &&  res.status(401).json("Username has already taken, please choose another username!")
             const savedUser = await newUser.save()
             res.status(201).json(savedUser)

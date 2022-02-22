@@ -7,8 +7,10 @@ import Pin from '../components/GoogleMapsPin.js'
 
 
 const Container = styled.div`
-height: 55.5vh;
-width: 100%;
+    height: 55.5vh;
+    width: 100%;
+    border: solid 3px teal;
+    border-radius: 4px;
 `
 
 

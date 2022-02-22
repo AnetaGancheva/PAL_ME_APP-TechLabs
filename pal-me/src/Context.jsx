@@ -11,8 +11,6 @@ export const GlobalContext = createContext()
 export const GlobalProvider = ({children}) => {
    
     //states
-    // isLogged state for the showing a second navbar when the user logged in
-    const [isLogged , setIsLogged] = useState(true)
     // dropdownMenu state for showing a dropdown menu when the user click on the down arrow in the navbar
     const [showDropdownMenu, setShowDropdownMenu] = useState(false)
     // checked state for the radio button in the search component, which is on of the two options "player" or "clubs"
@@ -23,7 +21,7 @@ export const GlobalProvider = ({children}) => {
     const [postcodeInput, setPostcodeInput] = useState('')
     // for invalid inputs 
     const [error, setError]  = useState('')
-    const [isValid, setIsValid]  = useState(false)
+    const [validPostcode, setValidPostcode]  = useState(false)
     // for google maps latitude+longtitude
     const [lat, setLat] = useState(48.8583701)
     const [lon, setLon] = useState(2.2922926)
@@ -34,20 +32,11 @@ export const GlobalProvider = ({children}) => {
     const handleMarkerClicked = () => {
         setMarker((prevState) => !prevState)
     }
-
-    const handleNavToggle = () => {
-        setIsLogged((prevState) => !prevState )
-    }
-
+  
     // to show/hide 
     const handleDropdownMenu = () => {
         setShowDropdownMenu((prevState) =>  !prevState)
         console.log('ho')
-    }
-
-    // handle logout
-    const handleLogout = () => {
-        setIsLogged(false)
     }
 
     // handle toggle checked radio button on the search section
@@ -55,10 +44,6 @@ export const GlobalProvider = ({children}) => {
         setIsChecked(prevState => !prevState)
     }
 
-   /* const handleEmailSelection = (email_id) => {
-        setCurrentEMailId(email_id);
-    }
-*/
     // to handle the text input when the user enter a post code
     const handlePostcodeInput = (e) => {
         setPostcodeInput(e.target.value)
@@ -83,7 +68,7 @@ export const GlobalProvider = ({children}) => {
                         console.log(LatLng);
                         setLat(LatLng[0]);
                         setLon(LatLng[1]);
-                        setIsValid(true)
+                        setValidPostcode(true)
                         setError('')
                     } else {
                         console.error("LatLng is " + LatLng);
@@ -91,7 +76,7 @@ export const GlobalProvider = ({children}) => {
                 });
         } else {
             setError("Please Enter A Valid Postcode ")
-            setIsValid(false)
+            validPostcode(false)
         }
     }
 
@@ -100,21 +85,18 @@ export const GlobalProvider = ({children}) => {
 
 
     return (<GlobalContext.Provider value={{
-        isLogged,
         showDropdownMenu,
         isChecked,
         currentEmailId,
         postcodeInput,
         error,
-        isValid,
+        validPostcode,
         lat,
         lon,
         isMarkerClicked,
         handlePostcodeInput,
         handleRadioChecked,
-        handleNavToggle,
         handleDropdownMenu,
-        handleLogout,
         setCurrentEMailId,
         handleSubmit,
         handleMarkerClicked

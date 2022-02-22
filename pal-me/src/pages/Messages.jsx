@@ -1,7 +1,8 @@
 /* as seen in and inspired by https://codepen.io/danielyewright/pen/EgYVxw */
 
 import Navbar from '../components/Navbar';
-import React from 'react';
+import {useContext} from 'react'
+import { UserContext } from '../UserContext'
 import 'font-awesome/css/font-awesome.min.css'; 
 import '../stylingFormsAndSelectFields.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -9,6 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const Messages = () => {
+  const { user } = useContext(UserContext);
     return(
         <>
         <Navbar />
@@ -20,8 +22,8 @@ const Messages = () => {
                             <img alt="avatar" width="64" hieght="60" src="https://i.pravatar.cc/300" />
                         </a>
                         <div class="user-name">
-                            <h5><a href="/messages">Username</a></h5>
-                            <span><a href="/messages">username@palme.nl</a></span>
+                            <h5><a href="/messages">{user.firstname}</a></h5>
+                            <span><a href="/messages">{user.email}</a></span>
                         </div>
                         <a class="mail-dropdown pull-right" href="/messages">
                             <i class="fa fa-chevron-down"></i>

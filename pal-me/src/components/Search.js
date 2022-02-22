@@ -7,7 +7,7 @@ import backgroundPhoto from "../images/Search_photo_transparent_3.png"
 
 const Container = styled.div`
     width: 100%;
-    height: ${props => props.isValid ? "20vh" : props.height};
+    height: ${props => props.validPostcode? "20vh" : props.height};
     background: url(${backgroundPhoto});
     background-size: cover;
     display: flex;
@@ -25,9 +25,9 @@ const SubmitContainer = styled.div`
     margin-bottom: 3%;
 `
 const Search = ({children, height}) => {
-    const {isValid} = useContext(GlobalContext)
+    const {validPostcode} = useContext(GlobalContext)
   return (
-      <Container isValid={isValid} height={height}>
+      <Container validPostcode={validPostcode} height={height}>
           <Wrapper>
            {children}
             <SubmitContainer>

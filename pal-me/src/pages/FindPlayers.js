@@ -12,25 +12,20 @@ import {Sports} from '../data'
 //import {Navigate} from 'react-router'
 import Map from './Map'
 
-/*const Image = styled.img`
-  width: 100%;;
-  border: teal dashed 2px;
-  border-radius: 4px;
-`
-*/
+
 
 const FindPlayers = () => {
-  const {isValid} = useContext(GlobalContext)
+  const {validPostcode} = useContext(GlobalContext)
   return <>
     <Navbar/>
-    <Search  height='60vh'>
+    <Search  height='70vh'>
     <FormGroup title="Enter Post code" input={<InputText/>}/>
     <FormGroup title="sport(s)" input={<SelectInput options={Sports}/>}/>
     <FormGroup title="Gender" input={<SelectInput options={[{value: "female"}, {value : "male"}]}/>}/>
     <FormGroup title="age" input={<SelectInput options={[{value:"12-18"},{value:"Above 18"},{value:"18-25"},{value:"25-45"},{value:"Above 50"}]}/>}/>
     <FormGroup title="level" input={<SelectInput options={[{value:"Beginner"},{value:"Intermediate"},{value:"Advanced"}]}/>}/>
     </Search>
-    { isValid ?  <Map /> : ''}
+    { validPostcode ?  <Map /> : ''}
     <Footer/>
   </>;
 };
